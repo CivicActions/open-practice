@@ -5,3 +5,4 @@ Open standards, open source, open data, open science, open government are ultima
 ## List of Practices
 * [OpenATO](https://openato.org)
 * [Impact Criteria Process](https://github.com/CivicActions/impact-criteria)
+* [OpenACR - Drupal's Example](https://www.drupal.org/docs/getting-started/accessibility/accessibility-conformance-report-acr-process)
