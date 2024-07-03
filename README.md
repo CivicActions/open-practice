@@ -9,6 +9,7 @@ Open standards, open source, open data, open science, open government are ultima
 * [CivicActions' Accessibility Playbook](https://accessibility.civicactions.com/playbook/)
 * [Drupal's OpenACR Process](https://www.drupal.org/docs/getting-started/accessibility/accessibility-conformance-report-acr-process)
 * [OSCAL Reusable Component Definitions Library](https://github.com/CivicActions/oscal-component-definitions)
+* [Digital.gov Site Scanning program - Google Sheet Highlights](https://github.com/CivicActions/site-evaluation-tools/blob/main/digital.gov-scan-upload.js.md)
 
 
 ## Documentation
