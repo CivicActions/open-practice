@@ -2,9 +2,13 @@
 
 # Agile Migration to Drupal
 
-## Contents
 
-[TOC]
+
+*License & Copyright: The materials herein are all © 2025 CivicActions*
+
+*Creative Commons License:* *This work is licensed under a* *Creative* *Commons* [*Attribution-ShareAlike 4.0 International*](https://creativecommons.org/licenses/by-sa/4.0/deed.en) 
+
+
 
 ## About the Open Requirements Library
 
@@ -843,3 +847,10 @@ Using an **Agile, slice-by-slice** methodology allows teams to deliver immediate
 All the technical details—from code repositories, CI/CD automation, theming with USWDS, rigorous testing for Section 508/WCAG compliance, content modeling, to final environment cutover—remain essential, but are **applied repeatedly in smaller increments** rather than in a singular, monolithic waterfall.
 
 This approach is **flexible, reduces risk, and aligns with modern digital service best practices** for large-scale Drupal migrations.
+
+
+
+*License & Copyright: The materials herein are all © 2025 CivicActions*
+
+*Creative Commons License:* *This work is licensed under a* *Creative* *Commons* [*Attribution-ShareAlike 4.0 International*](https://creativecommons.org/licenses/by-sa/4.0/deed.en) 
+
