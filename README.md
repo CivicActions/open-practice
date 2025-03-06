@@ -12,6 +12,7 @@ Open standards, open source, open data, open science, open government are ultima
 * [Digital.gov Site Scanning program - Google Sheet Highlights](https://github.com/CivicActions/site-evaluation-tools/blob/main/digital.gov-scan-upload.js.md)
 * [CivicActions' Partner Playbook](https://drive.google.com/drive/folders/1Ckmk_YgdW_QlxoGQxtSZ1REGCACsiPbB)
 * [Open Source Software vs Proprietary Software](https://docs.google.com/document/d/1o3rJSa1KhfC9QcliQ9RwgZsoHPJM54XzFmRLzrA8DnQ/edit?tab=t.0)
+* [Open Requirements Library](https://drive.google.com/drive/folders/1bXaRyI05VPUuXjhQYGXoNU3DEECsNDyZ)
 
 
 ## Documentation
