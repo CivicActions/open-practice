@@ -13,8 +13,8 @@ Open standards, open source, open data, open science, open government are ultima
 * [CivicActions' Partner Playbook](https://drive.google.com/drive/folders/1Ckmk_YgdW_QlxoGQxtSZ1REGCACsiPbB)
 * [Open Source Software vs Proprietary Software](https://docs.google.com/document/d/1o3rJSa1KhfC9QcliQ9RwgZsoHPJM54XzFmRLzrA8DnQ/edit?tab=t.0)
 * [Open Requirements Library](https://github.com/CivicActions/open-practice/tree/main/open-requirements-library)
+  * [White Paper: Open Requirements](https://docs.google.com/document/d/1OYrxJp5LaZMRSFltmnwvS2BpcRwnkDY3not6ELjH2M0) 
   * [Agile migration to Drupal](open-requirements-library/agile-migrations.md)
-
 * [CivicActions Guidebook](https://guidebook.civicactions.com/en/latest/)
 
 
