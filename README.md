@@ -15,6 +15,7 @@ Open standards, open source, open data, open science, open government are ultima
 * [Open Requirements Library](https://github.com/CivicActions/open-practice/tree/main/open-requirements-library)
   * [White Paper: Open Requirements](https://docs.google.com/document/d/1OYrxJp5LaZMRSFltmnwvS2BpcRwnkDY3not6ELjH2M0) 
   * [Agile migration to Drupal](open-requirements-library/agile-migrations.md)
+  * [Consolidating Web Properties with AI into Drupal](open-requirements-library/web-consolidation.md)
 * [Guide to Preparing and Maintaining Impactful Past Performance for Government Contractors](https://docs.google.com/document/d/1UyJ4l1tcvMGYO2yMCCpctu1qzuSkpfNBaSAgGp-lCis)
 * [5 Tips for Program Validation Support](https://docs.google.com/document/d/1LEqZjH2pco2gPtl1WSSiMXj0d4oD42jfd_pFiTjcAD8)
 * [CivicActions Guidebook](https://guidebook.civicactions.com/en/latest/)
