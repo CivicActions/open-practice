@@ -30,7 +30,18 @@ Anyone can contribute to the Open Requirements for Consolidating Web Properties 
 
 ## 1 Purpose & Scope
 
-This requirements template supports solicitations aimed at merging _multiple_ sites across the enterprise into a **single, already‑live Drupal instance**. The purpose of this is typically **cost savings** through decommissioning and efficiencies gained from a **streamlined enterprise-wide content management platform**. The focus is on **efficient content discovery and migration**—not on building a new site. Key outcomes include:
+This requirements template supports solicitations aimed at merging _multiple_ sites across the enterprise into a **single, already‑live Drupal instance**. The purpose of this is typically **cost savings** through decommissioning and efficiencies gained from a streamlined enterprise-wide content management platform.
+
+This initiative also contributes directly to **technology rationalization** — a structured approach to inventorying and evaluating IT assets (such as websites, CMS platforms, and related tools) to identify redundancies, reduce inefficiencies, and make strategic decisions about consolidation or retirement. By collapsing disparate web properties into a unified Drupal platform, agencies are enabled to:
+
+- Reduce costs by eliminating duplicate systems and licenses
+- Improve performance and user experience through modernized, standardized content delivery
+- Enhance security and compliance by consolidating on a vetted platform
+- Simplify the tech stack and reduce the complexity of long-term maintenance
+- Align digital operations with strategic modernization goals and federal-wide rationalization efforts
+
+
+Key outcomes include:
 
 - Comprehensive inventory of every retiring site’s information architecture.
 - AI‑assisted identification of Drupal content‑types, fields and metadata.
