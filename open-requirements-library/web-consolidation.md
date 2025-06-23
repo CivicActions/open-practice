@@ -24,9 +24,9 @@ Read more about the [Open Requirements Library](https://docs.google.com/document
 
 The requirements listed within this document are intended to be a comprehensive, yet “white-labeled,” description of actions required to  _multiple_ sites across the enterprise into a single Drupal site. The expectation is that a person (for example, a program office for a government agency) could copy/paste these requirements into a draft solicitation for vendor support. Then, the user could customize requirements where and how they see fit. The program office can collect and learn best practices for web-consolidation initiatives during this process. Efficiency, integrity, and quality increase as the user doesn't have to start from scratch, ask an incumbent vendor for the content baseline, or copy/paste from a previous (potentially flawed) solicitation.
 
-Additionally, vendors providing web consolidation services are welcome to learn, contribute to and prepare for best practices.
+Additionally, vendors providing web rationalization services are welcome to learn, contribute to and prepare for best practices.
 
-Anyone can contribute to the Open Requirements for Consolidating Web Properties with AI into Drupal. Contributions will be reviewed for their positive impact on improving the efficiency, integrity, and quality of requirements.
+Anyone can contribute to the Open Requirements for Rationalizing Web Properties with AI into Drupal. Contributions will be reviewed for their positive impact on improving the efficiency, integrity, and quality of requirements.
 
 ## 1 Purpose & Scope
 
