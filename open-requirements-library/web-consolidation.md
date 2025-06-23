@@ -20,7 +20,7 @@ The purpose of the Open Requirements Library is to utilize open and emerging tec
 
 Read more about the [Open Requirements Library](https://docs.google.com/document/d/1OYrxJp5LaZMRSFltmnwvS2BpcRwnkDY3not6ELjH2M0/edit#heading=h.hblvjympznf4), and contribute your ideas.
 
-### How may you use the Open Requirements for Consolidating Web Properties with AI into Drupal?
+### How may you use the Open Requirements for Rationalizing Web Properties with AI into Drupal?
 
 The requirements listed within this document are intended to be a comprehensive, yet “white-labeled,” description of actions required to  _multiple_ sites across the enterprise into a single Drupal site. The expectation is that a person (for example, a program office for a government agency) could copy/paste these requirements into a draft solicitation for vendor support. Then, the user could customize requirements where and how they see fit. The program office can collect and learn best practices for web-consolidation initiatives during this process. Efficiency, integrity, and quality increase as the user doesn't have to start from scratch, ask an incumbent vendor for the content baseline, or copy/paste from a previous (potentially flawed) solicitation.
 
