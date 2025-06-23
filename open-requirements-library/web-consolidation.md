@@ -1,6 +1,6 @@
 ### _Open Requirements_
 
-# Consolidating Web Properties with AI into Drupal
+# Rationalizing Web Properties with AI into Drupal
 
 _License & Copyright: The materials herein are all © 2025 CivicActions_
 
