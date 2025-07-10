@@ -227,7 +227,7 @@ With a better understanding of the content, the team can plan a **migration/cuto
    - If content needs to be reviewed and/or updated, determine how that will be accomplished (before or after migration, manually edits, automatic fixes etc)
    - Identify approaches for migrating users and any other non-content data.
 
-2. ###### Involve Edito1rial Stakeholders
+2. ###### Involve Editorial Stakeholders
 
    - Discuss content cleanup, archiving older or irrelevant material, and ensuring only high-value content is migrated.
    - Clarify how editors will handle content updates during overlap (e.g., do they double-edit in both old and new systems for a time?).
