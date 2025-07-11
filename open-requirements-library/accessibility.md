@@ -187,5 +187,5 @@ This document aligns with federal accessibility procurement guidance, including:
 
 This accessibility procurement document is a **living resource** designed to evolve with best practices, legal updates, and technological advancements. Procurement officers and vendors are encouraged to **review, refine, and contribute** to ensure accessibility remains a core consideration in federal acquisitions.
 
-For more details or to contribute, visit: **Open Requirements Library**.
+For more details or to contribute, visit: **[Open Requirements Library](https://github.com/CivicActions/open-practice/)**.
 
