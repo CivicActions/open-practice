@@ -27,7 +27,6 @@ Read more about the [Open Requirements Library](https://github.com/civicactions/
 The requirements outlined in this document provide a **comprehensive, vendor-agnostic** framework for integrating accessibility into government procurements. A contracting officer can **copy and paste** these requirements into a draft solicitation for vendor support, then **customize them** based on agency needs. This ensures a consistent and well-defined approach to accessibility requirements.
 
 By utilizing this document, procurement officers and program managers can:
-
 * Establish clear accessibility expectations from the outset of a project.  
 * Reduce post-award disputes related to accessibility compliance.  
 * Ensure compliance with **Section 508 of the Rehabilitation Act** and **WCAG 2.2 Level AA** standards.  
@@ -79,7 +78,6 @@ In addition, the contracting agency will:
 ## **Project Roles in Website Accessibility Implementation**
 
 Some roles may be combined depending on project scope and team size. 
-
 * Project Manager  
 * Accessibility Engineer / Specialist  
 * User Experience (UX) Designer  
@@ -105,7 +103,6 @@ The contractor ("Contractor") shall ensure that all task areas executed in suppo
 4. **Quality Assurance Surveillance Plan (QASP).** See [Task 4\. Performance reporting: Quality Assurance Surveillance Plan (QASP)](#task-4.-performance-reporting:-quality-assurance-surveillance-plan-\(qasp\)).
 
 Deliverables:
-
 * Kickoff meeting schedule and agenda  
 * Acknowledgement of Section 508 standards defined per product  
 * Contractor Project Management Plan (CPMP)   
@@ -120,7 +117,6 @@ Deliverables:
    3. Record audit findings and ACR process in project documentation.
 
 Deliverables:
-
 * Benchmark ACR for each digital deliverable defined in the SOW  
 * Project documentation 
 
@@ -148,7 +144,6 @@ Deliverables:
       1. A serious risk would include critical accessibility barriers identified by end users, where access to content or website functionality is prohibited.
 
 Deliverables:
-
 * Remediation progress reports per development sprint  
 * Documentation:  
   * Test plans  
@@ -165,7 +160,6 @@ A performance-based Quality Assurance Surveillance Plan (QASP) sets forth the pr
 The QASP describes the mechanism for documenting noteworthy accomplishments or discrepancies for work performed by the contractor. Information generated from surveillance activities will directly feed into the performance discussions with the contractor and assist CMS in its CPARS performance evaluation.
 
 The primary goals of a QASP are to:
-
 * Bring structure and organization to the Government’s monitoring and surveillance of key tasks/services or deliverables of contractor performance under the above contract.  
 * Indicate key tasks/services or deliverables that will be assessed against established performance standards.  
 * Describe the evaluation methods and processes (i.e., random sampling, etc.) that will be used by the Government during surveillance activities.  
@@ -177,7 +171,6 @@ The primary goals of a QASP are to:
 ## **Resources and References**
 
 This document aligns with federal accessibility procurement guidance, including:
-
 * [Section 508 Standards and Assessment Criteria](https://www.section508.gov/manage/section-508-assessment/criteria-09/)  
 * [Buy Accessible ICT: Section 508 Procurement](https://www.section508.gov/buy/)  
 * [Government-wide Section 508 Assessment](https://www.section508.gov/manage/section-508-assessment/)  
