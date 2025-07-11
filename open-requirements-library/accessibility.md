@@ -153,7 +153,7 @@ Deliverables:
 * Annual ACR per product  
 * Response to ad hoc reports and alerts
 
-### **Task 4\. Performance reporting: Quality Assurance Surveillance Plan (QASP)** {#task-4.-performance-reporting:-quality-assurance-surveillance-plan-(qasp)}
+### **Task 4\. Performance reporting: Quality Assurance Surveillance Plan (QASP)**
 
 A performance-based Quality Assurance Surveillance Plan (QASP) sets forth the procedures and guidance that the Agency will use in evaluating the technical performance of the contractor in accordance with the terms and conditions of the contract. The QASP will be used as a Government document to assist in monitoring contractor activities and during inspection and acceptance of contract deliverables. The Government reserves the right to make changes to this QASP during contract performance. 
 
