@@ -1,3 +1,8 @@
+---
+layout: default
+title: Free and Open Source Software (FOSS) as Commercial Off-the-Shelf (COTS)
+---
+
 # Free and Open Source Software (FOSS) as Commercial Off-the-Shelf (COTS)
 
 This document summarizes key points from an article advocating for the recognition and prioritization of Free and Open Source Software (FOSS) as Commercial Off-the-Shelf (COTS) solutions within government agencies.
