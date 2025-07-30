@@ -1,3 +1,4 @@
-title: Open Requirements Library
+title: "Open Requirements Library"
 markdown: kramdown
-theme: minima  # optional but recommended
+theme: minima
+baseurl: "/open-practice"
