@@ -8,5 +8,7 @@ Current library files include:
 - [Open Source Procurement FAQ](OSS-procurement-FAQ.md)
 - [Agile Migration to Drupal](agile-migrations.md)
 - [Rationalizing Web Properties with AI into Drupal](web-consolidation.md)
-- [Free and Open Source Software (FOSS) as Commercial Off-the-Shelf (COTS)](FOSS-COTS.md)
 - [Section 508 Compliance for Website Maintenance and Enhancement](accessibility.md)
+
+Related articles:
+- [Free and Open Source Software (FOSS) as Commercial Off-the-Shelf (COTS)](FOSS-COTS.md)
