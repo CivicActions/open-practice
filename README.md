@@ -12,7 +12,7 @@ Open standards, open source, open data, open science, open government are ultima
 * [Digital.gov Site Scanning program - Google Sheet Highlights](https://github.com/CivicActions/site-evaluation-tools/blob/main/digital.gov-scan-upload.js.md)
 * [CivicActions' Partner Playbook](https://drive.google.com/drive/folders/1Ckmk_YgdW_QlxoGQxtSZ1REGCACsiPbB) [GoogleDoc] - Word Version of [Readme](https://raw.githubusercontent.com/CivicActions/open-practice/main/docs/Read%20Me%20-%20Partner%20Playbook.docx) & [Template](https://raw.githubusercontent.com/CivicActions/open-practice/main/docs/_Template%20-%20Partner%20Playbook.docx)
 * [Open Source Software vs Proprietary Software](https://docs.google.com/document/d/1o3rJSa1KhfC9QcliQ9RwgZsoHPJM54XzFmRLzrA8DnQ/edit?tab=t.0) [GoogleDoc]
-* [Open Requirements Library](https://github.com/CivicActions/open-practice/tree/main/open-requirements-library)
+* [Open Requirements Library](https://github.com/CivicActions/open-practice/tree/main/open-requirements-library#open-requirements-library)
   * [White Paper: Open Requirements](https://docs.google.com/document/d/1OYrxJp5LaZMRSFltmnwvS2BpcRwnkDY3not6ELjH2M0) [GoogleDoc]
   * [Agile migration to Drupal](open-requirements-library/agile-migrations.md)
   * [Rationalizing Web Properties with AI into Drupal](open-requirements-library/web-consolidation.md)
