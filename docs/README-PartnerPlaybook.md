@@ -16,7 +16,9 @@ Drawing on corporate experience of 20+ years in digital services and open source
 
 We operate on the pillars of digital public goods, which include open knowledge, open data, open code and open standards. With this, we also maintain a belief in the power of community—inviting contribution from a wider community of fellow technologists, practitioners and emerging talent. And, above all, we are guided by our values of balance, openness and care.
 
-The [Partner Playbook](https://docs.google.com/document/d/1JEvEvUEkaNUcM06UMOgcWqMi5wcVrPFBZfylH7JK_4Y/edit?tab=t.0#heading=h.x9g098saogxd) is open to receive comments as contributed thoughts, edits and questions. CivicActions, as the maintaining party, commits to routinely review comments, follow up on questions and add edits deemed to best align with the objective of the Playbook.
+The [Partner Playbook](https://docs.google.com/document/d/1JEvEvUEkaNUcM06UMOgcWqMi5wcVrPFBZfylH7JK_4Y/edit?tab=t.0#heading=h.x9g098saogxd) is open to receive comments as contributed thoughts, edits and questions. We also provide a version as a [Word Document](https://github.com/CivicActions/open-practice/blob/main/docs/_Template%20-%20Partner%20Playbook.docx).
+
+CivicActions, as the maintaining party, commits to routinely review comments, follow up on questions and add edits deemed to best align with the objective of the Playbook.
 
 **If you have questions or ideas, please contact:**  
 Keith Kawasaki, Director, Growth & Partnerships  
