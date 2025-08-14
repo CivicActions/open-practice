@@ -8,7 +8,7 @@ This checklist is intended to guide procurement officers in evaluating open sour
    * Confirm whether the proposed solution incorporates or builds upon existing OSS projects.  
 2. **Is the OSS license OSI-approved?**  
    * Ensure the software is licensed under a license approved by the Open Source Initiative (OSI).  
-   * Common examples include MIT, Apache-2.0, GPLv3, BSD, and MPL.  
+   * Common examples include MIT, Apache-2.0, GPLv3, AGPLv3, BSD, and MPL.  
 3. **Is the OSS widely used and maintained?**  
 * Look for evidence of:  
   - [ ] Active issue tracking  
@@ -22,7 +22,7 @@ This checklist is intended to guide procurement officers in evaluating open sour
    * Require an SBOM listing all open source components and dependencies, their versions, and license types.  
 7. **Are licensing obligations understood and documented?**  
    * Identify whether:  
-     - [ ] Copyleft obligations (e.g., GPL) have been reviewed  
+     - [ ] Copyleft obligations (e.g., GPL, AGPL and MPL) have been reviewed  
      - [ ] License compatibility has been assessed  
      - [ ] Attribution or disclosure requirements are met  
 8. **Has the agency retained rights to reuse and modify the software?**  
