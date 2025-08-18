@@ -9,6 +9,9 @@
     <style>
         :root {
             /* WCAG 2.2 AAA compliant colors */
+            --blue-700: #1a4480;
+            --blue-800: #162e51;
+            --blue-100: #d4e5ff;
             --red-700: #6A0000;
             --red-800: #4B0000;
             --red-100: #FADAD6;
@@ -55,7 +58,7 @@
         .sidebar {
             width: 16rem;
             flex-shrink: 0;
-            background-color: var(--red-700);
+            background-color: var(--blue-700);
             color: var(--link-color);
             box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
             display: flex;
@@ -75,7 +78,7 @@
         
         .sidebar-header p {
             font-size: 0.875rem;
-            color: var(--red-100);
+            color: var(--blue-100);
             margin-top: 0.25rem;
         }
 
@@ -105,12 +108,12 @@
         }
         
         .navigation-link:hover {
-            background-color: var(--red-800);
+            background-color: var(--blue-800);
             text-decoration: underline;
         }
         
         .navigation-link.active {
-            background-color: var(--red-800);
+            background-color: var(--blue-800);
         }
 
         .main-content {
@@ -142,7 +145,7 @@
         .content-container ul { list-style-type: disc; margin-left: 1.5rem; margin-top: 0.5rem; }
         .content-container ol { list-style-type: decimal; margin-left: 1.5rem; margin-top: 0.5rem; }
         .content-container li { margin-bottom: 0.25rem; }
-        .content-container a { color: var(--red-700); text-decoration: underline; }
+        .content-container a { color: var(--blue-700); text-decoration: underline; }
         .content-container img { max-width: 100%; height: auto; border-radius: 0.5rem; margin-top: 1rem; margin-bottom: 1rem; }
         .content-container pre { 
             background-color: var(--gray-800); 
@@ -156,7 +159,7 @@
             transition: outline-color 0.2s;
         }
         .content-container pre:focus-within {
-            outline-color: var(--red-700);
+            outline-color: var(--blue-700);
         }
         .content-container code { 
             background-color: var(--gray-200); 
@@ -200,7 +203,7 @@
         }
         
         .back-to-top-button:hover {
-            color: var(--red-700);
+            color: var(--blue-700);
             text-decoration: underline;
         }
         
@@ -234,7 +237,7 @@
         <nav id="navigation" class="navigation-list scrollbar-hidden">
             <ul class="navigation-list-items">
                 <!-- Navigation links will be populated here by JavaScript -->
-                <li><p style="color: var(--red-100); font-size: 0.875rem; padding: 1rem; animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;">Loading navigation...</p></li>
+                <li><p style="color: var(--blue-100); font-size: 0.875rem; padding: 1rem; animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;">Loading navigation...</p></li>
             </ul>
         </nav>
         <div class="logo-container">
@@ -296,7 +299,7 @@
                     return files.filter(file => file.name.endsWith('.md'));
                 } catch (error) {
                     console.error("Failed to fetch file list:", error);
-                    navigationContainer.innerHTML = '<li><p style="color: var(--red-100); font-size: 0.875rem; padding: 1rem; animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;">Error loading files. Check console for details.</p></li>';
+                    navigationContainer.innerHTML = '<li><p style="color: var(--blue-100); font-size: 0.875rem; padding: 1rem; animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;">Error loading files. Check console for details.</p></li>';
                     return [];
                 }
             }
@@ -331,7 +334,7 @@
                     contentContainer.scrollTop = 0;
                 } catch (error) {
                     console.error("Failed to fetch and render markdown:", error);
-                    contentContainer.innerHTML = `<p style="color: var(--red-700); padding: 2rem 0;">Error loading content. Please try again later.</p>`;
+                    contentContainer.innerHTML = `<p style="color: var(--blue-700); padding: 2rem 0;">Error loading content. Please try again later.</p>`;
                     // Clear pagination on error
                     paginationContainer.innerHTML = '';
                 }
@@ -409,7 +412,7 @@
                 navigationContainer.innerHTML = '';
 
                 if (markdownFiles.length === 0) {
-                    navigationContainer.innerHTML = '<li><p style="color: var(--red-100); font-size: 0.875rem; padding: 1rem; animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;">No markdown files found.</p></li>';
+                    navigationContainer.innerHTML = '<li><p style="color: var(--blue-100); font-size: 0.875rem; padding: 1rem; animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;">No markdown files found.</p></li>';
                     return;
                 }
 
