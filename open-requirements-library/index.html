@@ -245,6 +245,43 @@
             overflow: visible; /* Allow the SVG to be properly rendered */
         }
 
+/* New CSS for bottom links */
+.pagination-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 2rem;
+    gap: 1rem;
+}
+
+.bottom-links-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.improve-page-link {
+    font-size: 0.875rem;
+    color: var(--gray-700);
+    text-decoration: underline;
+}
+
+.improve-page-link:hover {
+    color: var(--blue-700);
+}
+
+/* Updated print CSS to hide the new link */
+@media print {
+    .sidebar,
+    .pagination-container,
+    .back-to-top-button,
+    .improve-page-link,
+    .bottom-links-wrapper {
+        display: none;
+    }
+}
+        
 /* On mobile, we stack the content and sidebar vertically */
 @media (max-width: 768px) {
     body {
@@ -462,57 +499,88 @@
                 }
             }
             
-            // Function to update the pagination links
-            function updatePagination(currentFileIndex) {
-                paginationContainer.innerHTML = ''; // Clear existing buttons
-                
-                const prevFile = markdownFiles[currentFileIndex - 1];
-                const nextFile = markdownFiles[currentFileIndex + 1];
-
-                // Create and append the "Previous" button if it exists
-                if (prevFile) {
-                    const prevButton = document.createElement('a');
-                    prevButton.href = `#${prevFile.name}`;
-                    prevButton.textContent = '← Previous';
-                    prevButton.classList.add('pagination-button');
-                    prevButton.addEventListener('click', (e) => {
-                        e.preventDefault();
-                        fetchAndRenderMarkdown(prevFile.name);
-                        updateActiveLink(prevFile.name);
-                    });
-                    paginationContainer.appendChild(prevButton);
-                } else {
-                    // Add an empty div for spacing if no previous button
-                    const spacer = document.createElement('div');
-                    paginationContainer.appendChild(spacer);
-                }
-                
-                // Add the "Back to Top" button
-                const backToTopButton = document.createElement('a');
-                backToTopButton.href = '#top';
-                backToTopButton.textContent = 'Back to Top';
-                backToTopButton.classList.add('back-to-top-button');
-                backToTopButton.addEventListener('click', (e) => {
-                    e.preventDefault();
-                    document.querySelector('body').scrollIntoView({ behavior: 'smooth' });
-                });
-                paginationContainer.appendChild(backToTopButton);
 
 
-                // Create and append the "Next" button if it exists
-                if (nextFile) {
-                    const nextButton = document.createElement('a');
-                    nextButton.href = `#${nextFile.name}`;
-                    nextButton.textContent = 'Next →';
-                    nextButton.classList.add('pagination-button');
-                    nextButton.addEventListener('click', (e) => {
-                        e.preventDefault();
-                        fetchAndRenderMarkdown(nextFile.name);
-                        updateActiveLink(nextFile.name);
-                    });
-                    paginationContainer.appendChild(nextButton);
-                }
-            }
+// Function to update the pagination and footer links
+function updatePagination(currentFileIndex) {
+    paginationContainer.innerHTML = ''; // Clear existing buttons
+
+    const prevFile = markdownFiles[currentFileIndex - 1];
+    const nextFile = markdownFiles[currentFileIndex + 1];
+
+    // Create a container for the navigation buttons
+    const navButtonsWrapper = document.createElement('div');
+    navButtonsWrapper.style.display = 'flex';
+    navButtonsWrapper.style.justifyContent = 'space-between';
+    navButtonsWrapper.style.width = '100%';
+    navButtonsWrapper.style.marginTop = '1rem';
+    
+    // Create and append the "Previous" button if it exists
+    if (prevFile) {
+        const prevButton = document.createElement('a');
+        prevButton.href = `#${prevFile.name}`;
+        prevButton.textContent = '← Previous';
+        prevButton.classList.add('pagination-button');
+        prevButton.addEventListener('click', (e) => {
+            e.preventDefault();
+            fetchAndRenderMarkdown(prevFile.name);
+            updateActiveLink(prevFile.name);
+        });
+        navButtonsWrapper.appendChild(prevButton);
+    } else {
+        const spacer = document.createElement('div');
+        navButtonsWrapper.appendChild(spacer);
+    }
+
+    // Create and append the "Next" button if it exists
+    if (nextFile) {
+        const nextButton = document.createElement('a');
+        nextButton.href = `#${nextFile.name}`;
+        nextButton.textContent = 'Next →';
+        nextButton.classList.add('pagination-button');
+        nextButton.addEventListener('click', (e) => {
+            e.preventDefault();
+            fetchAndRenderMarkdown(nextFile.name);
+            updateActiveLink(nextFile.name);
+        });
+        navButtonsWrapper.appendChild(nextButton);
+    } else {
+        const spacer = document.createElement('div');
+        navButtonsWrapper.appendChild(spacer);
+    }
+
+    // Append the navigation buttons wrapper to the main container
+    paginationContainer.appendChild(navButtonsWrapper);
+
+    // Create a wrapper for the bottom links
+    const bottomLinksWrapper = document.createElement('div');
+    bottomLinksWrapper.classList.add('bottom-links-wrapper');
+
+    // Add the "Help improve this page" link
+    const improvePageLink = document.createElement('a');
+    const githubFileUrl = `https://github.com/${repoOwner}/${repoName}/blob/${branch}/${contentPath}/${markdownFiles[currentFileIndex].name}`;
+    improvePageLink.href = githubFileUrl;
+    improvePageLink.textContent = 'Help improve this page';
+    improvePageLink.target = '_blank'; // Open in a new tab
+    improvePageLink.classList.add('improve-page-link');
+    bottomLinksWrapper.appendChild(improvePageLink);
+
+    // Add the "Back to Top" button
+    const backToTopButton = document.createElement('a');
+    backToTopButton.href = '#top';
+    backToTopButton.textContent = 'Back to Top';
+    backToTopButton.classList.add('back-to-top-button');
+    backToTopButton.addEventListener('click', (e) => {
+        e.preventDefault();
+        document.querySelector('body').scrollIntoView({ behavior: 'smooth' });
+    });
+    bottomLinksWrapper.appendChild(backToTopButton);
+    
+    // Append the bottom links wrapper
+    paginationContainer.appendChild(bottomLinksWrapper);
+}
+
+            
 
             // Function to update the active state of a link in the sidebar
             function updateActiveLink(filename) {
