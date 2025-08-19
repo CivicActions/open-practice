@@ -216,12 +216,33 @@
             margin-top: auto;
         }
 
+        .logo-container {
+            padding: 1rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            border-top: 1px solid rgba(255, 255, 255, 0.2);
+            margin-top: auto;
+            width: 100%;
+            box-sizing: border-box;
+            overflow: hidden; /* Prevent content from overflowing */
+        }
+
+        .logo-container a {
+            width: 100%;
+            display: block;
+            text-align: center;
+        }
+
         .logo-container svg {
-            width: 100%; /* Make SVG fit container width */
-            height: auto; /* Maintain aspect ratio */
-            max-width: 100%; /* Ensure it doesn't exceed container width */
-            max-height: 100%; /* Ensure it doesn't exceed container height */
-            display: block; /* Remove any default spacing */
+            width: auto;
+            height: auto;
+            max-width: 90%; /* Ensure the SVG stays within the container with some padding */
+            max-height: 2.5rem; /* Control the height of the SVG */
+            display: inline-block;
+            fill: currentColor;
+            overflow: visible; /* Allow the SVG to be properly rendered */
         }
 
 /* On mobile, we stack the content and sidebar vertically */
