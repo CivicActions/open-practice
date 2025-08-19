@@ -1,701 +1,683 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+<head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CivicActions' Open Practice Guides</title>
-    <!-- Inter font for clean typography -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
     <style>
-      :root {
-        /* WCAG 2.2 AAA compliant colors */
-        --blue-700: #1a4480;
-        --blue-800: #162e51;
-        --blue-100: #d4e5ff;
-        --red-700: #6A0000;
-        --red-800: #4B0000;
-        --red-100: #FADAD6;
-        --gray-100: #f3f4f6;
-        --gray-200: #e5e7eb;
-        --gray-500: #6b7280;
-        --gray-600: #4b5563;
-        --gray-700: #374151;
-        --gray-800: #1f2937;
-        --gray-900: #111827;
-        --link-color: #FADAD6;
-      }
-
-      body {
-        font-family: 'Inter', sans-serif;
-        display: flex;
-        min-height: 100vh;
-        background-color: var(--gray-100);
-        color: var(--gray-800);
-      }
-
-      .scrollbar-hidden::-webkit-scrollbar {
-        display: none;
-      }
-
-      .scrollbar-hidden {
-        -ms-overflow-style: none;
-        scrollbar-width: none;
-      }
-
-      .skip-link {
-        position: absolute;
-        top: -40px;
-        left: 0;
-        background: #000;
-        color: #fff;
-        padding: 8px;
-        z-index: 1000;
-        transition: top 0.3s;
-      }
-
-      .skip-link:focus {
-        top: 0;
-      }
-
-      .sidebar {
-        width: 16rem;
-        flex-shrink: 0;
-        background-color: var(--blue-700);
-        color: var(--link-color);
-        box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
-        display: flex;
-        flex-direction: column;
-        transition: all 0.3s ease-in-out;
-      }
-
-      .sidebar-header {
-        padding: 1.5rem;
-      }
-
-      .sidebar-header h1 {
-        font-size: 1.5rem;
-        font-weight: 700;
-        letter-spacing: 0.05em;
-      }
-
-      .sidebar-header p {
-        font-size: 0.875rem;
-        color: var(--blue-100);
-        margin-top: 0.25rem;
-      }
-
-      .navigation-list {
-        flex: 1;
-        overflow-y: auto;
-        padding: 1rem;
-        display: flex;
-        flex-direction: column;
-        gap: 0.25rem;
-        list-style: none;
-        margin: 0;
-      }
-
-      .navigation-list li {
-        list-style: none;
-      }
-
-      .navigation-link {
-        display: block;
-        padding: 0.5rem 1rem;
-        border-radius: 0.5rem;
-        font-weight: 500;
-        transition: background-color 0.2s;
-        color: var(--link-color);
-        /* Updated for AAA contrast */
-        text-decoration: none;
-      }
-
-      .navigation-link:hover {
-        background-color: var(--blue-800);
-        text-decoration: underline;
-      }
-
-      .navigation-link.active {
-        background-color: var(--blue-800);
-      }
-
-      .main-content {
-        flex: 1;
-        display: flex;
-        flex-direction: column;
-        padding: 2rem;
-        overflow-y: auto;
-      }
-
-      .content-wrapper {
-        max-width: 56rem;
-        margin: 0 auto;
-        width: 100%;
-      }
-
-      .content-container {
-        background-color: white;
-        padding: 2rem;
-        border-radius: 0.75rem;
-        box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
-      }
-
-      /* Styles for markdown content, adjusted for contrast */
-      .content-container h1 {
-        font-size: 2.25rem;
-        font-weight: 700;
-        color: var(--gray-900);
-        margin-bottom: 1rem;
-      }
-
-      .content-container h2 {
-        font-size: 1.875rem;
-        font-weight: 600;
-        color: var(--gray-800);
-        margin-top: 1.5rem;
-        margin-bottom: 0.75rem;
-      }
-
-      .content-container h3 {
-        font-size: 1.5rem;
-        font-weight: 600;
-        color: var(--gray-800);
-        margin-top: 1.25rem;
-        margin-bottom: 0.5rem;
-      }
-
-      .content-container p {
-        font-size: 1rem;
-        line-height: 1.75rem;
-        color: var(--gray-600);
-        margin-top: 1rem;
-        margin-bottom: 1rem;
-      }
-
-      .content-container ul {
-        list-style-type: disc;
-        margin-left: 1.5rem;
-        margin-top: 0.5rem;
-      }
-
-      .content-container ol {
-        list-style-type: decimal;
-        margin-left: 1.5rem;
-        margin-top: 0.5rem;
-      }
-
-      .content-container li {
-        margin-bottom: 0.25rem;
-      }
-
-      .content-container a {
-        color: var(--blue-700);
-        text-decoration: underline;
-      }
-
-      .content-container img {
-        max-width: 100%;
-        height: auto;
-        border-radius: 0.5rem;
-        margin-top: 1rem;
-        margin-bottom: 1rem;
-      }
-
-      .content-container pre {
-        background-color: var(--gray-800);
-        color: white;
-        padding: 1rem;
-        border-radius: 0.5rem;
-        overflow: auto;
-        font-family: monospace;
-        /* Make it focusable for keyboard users */
-        outline: 2px solid transparent;
-        transition: outline-color 0.2s;
-      }
-
-      .content-container pre:focus-within {
-        outline-color: var(--blue-700);
-      }
-
-      .content-container code {
-        background-color: var(--gray-200);
-        padding: 0.25rem 0.5rem;
-        border-radius: 0.25rem;
-        font-weight: 600;
-        color: var(--gray-800);
-        /* Updated for contrast */
-      }
-
-      .pagination-container {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        /* Vertically align items */
-        margin-top: 2rem;
-      }
-
-      .pagination-button {
-        padding: 0.5rem 1rem;
-        border-radius: 0.5rem;
-        background-color: white;
-        box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
-        color: var(--gray-700);
-        transition: background-color 0.2s;
-        text-decoration: none;
-      }
-
-      .pagination-button:hover {
-        background-color: var(--gray-200);
-        text-decoration: underline;
-      }
-
-      .back-to-top-button {
-        padding: 0.5rem 1rem;
-        border-radius: 0.5rem;
-        background-color: transparent;
-        color: var(--gray-700);
-        transition: color 0.2s;
-        text-decoration: none;
-        font-size: 0.875rem;
-        font-weight: 500;
-      }
-
-      .back-to-top-button:hover {
-        color: var(--blue-700);
-        text-decoration: underline;
-      }
-
-      .logo-container {
-        padding: 1.5rem;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        border-top: 1px solid rgba(255, 255, 255, 0.2);
-        margin-top: auto;
-      }
-
-      .logo-container {
-        padding: 1rem;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        border-top: 1px solid rgba(255, 255, 255, 0.2);
-        margin-top: auto;
-        width: 100%;
-        box-sizing: border-box;
-        overflow: hidden;
-        /* Prevent content from overflowing */
-      }
-
-      .logo-container a {
-        width: 100%;
-        display: block;
-        text-align: center;
-      }
-
-      .logo-container svg {
-        width: auto;
-        height: auto;
-        max-width: 90%;
-        /* Ensure the SVG stays within the container with some padding */
-        max-height: 2.5rem;
-        /* Control the height of the SVG */
-        display: inline-block;
-        fill: currentColor;
-        overflow: visible;
-        /* Allow the SVG to be properly rendered */
-      }
-
-      /* New CSS for bottom links */
-      .pagination-container {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        margin-top: 2rem;
-        gap: 1rem;
-      }
-
-      .bottom-links-wrapper {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        gap: 0.5rem;
-      }
-
-      .improve-page-link {
-        font-size: 0.875rem;
-        color: var(--gray-700);
-        text-decoration: underline;
-      }
-
-      .improve-page-link:hover {
-        color: var(--blue-700);
-      }
-
-      /* Updated print CSS to hide the new link */
-      @media print {
-
-        .sidebar,
-        .pagination-container,
-        .back-to-top-button,
-        .improve-page-link,
-        .bottom-links-wrapper {
-          display: none;
+        :root {
+            /* WCAG 2.2 AAA compliant colors */
+            --blue-700: #1a4480;
+            --blue-800: #162e51;
+            --blue-100: #d4e5ff;
+            --red-700: #6A0000;
+            --red-800: #4B0000;
+            --red-100: #FADAD6;
+            --gray-100: #f3f4f6;
+            --gray-200: #e5e7eb;
+            --gray-500: #6b7280;
+            --gray-600: #4b5563;
+            --gray-700: #374151;
+            --gray-800: #1f2937;
+            --gray-900: #111827;
+            --link-color: #FADAD6;
         }
-      }
 
-      /* On mobile, we stack the content and sidebar vertically */
-      @media (max-width: 768px) {
         body {
-          flex-direction: column;
+            font-family: 'Inter', sans-serif;
+            display: flex;
+            min-height: 100vh;
+            background-color: var(--gray-100);
+            color: var(--gray-800);
+        }
+
+        .scrollbar-hidden::-webkit-scrollbar {
+            display: none;
+        }
+
+        .scrollbar-hidden {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+
+        .skip-link {
+            position: absolute;
+            top: -40px;
+            left: 0;
+            background: #000;
+            color: #fff;
+            padding: 8px;
+            z-index: 1000;
+            transition: top 0.3s;
+        }
+
+        .skip-link:focus {
+            top: 0;
         }
 
         .sidebar {
-          width: 100%;
-          box-shadow: none;
-          /* Remove shadow on mobile */
-          flex-direction: row;
-          /* Stack header and nav horizontally */
-          flex-wrap: wrap;
-          /* Allow wrapping */
-          padding: 0;
+            width: 16rem;
+            flex-shrink: 0;
+            background-color: var(--blue-700);
+            color: var(--link-color);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+            display: flex;
+            flex-direction: column;
+            transition: all 0.3s ease-in-out;
         }
 
         .sidebar-header {
-          padding: 1rem;
+            padding: 1.5rem;
         }
 
         .sidebar-header h1 {
-          font-size: 1.25rem;
+            font-size: 1.5rem;
+            font-weight: 700;
+            letter-spacing: 0.05em;
         }
 
         .sidebar-header p {
-          display: none;
-          /* Hide the subtitle on small screens */
+            font-size: 0.875rem;
+            color: var(--blue-100);
+            margin-top: 0.25rem;
         }
 
         .navigation-list {
-          flex-direction: row;
-          flex-wrap: nowrap;
-          overflow-x: auto;
-          /* Allow horizontal scrolling */
-          -webkit-overflow-scrolling: touch;
-          padding: 0 1rem;
-          gap: 0;
+            flex: 1;
+            overflow-y: auto;
+            padding: 1rem;
+            display: flex;
+            flex-direction: column;
+            gap: 0.25rem;
+            list-style: none;
+            margin: 0;
         }
 
-        .navigation-list-items {
-          display: flex;
-          list-style: none;
-          padding: 0;
-          margin: 0;
-          gap: 0.5rem;
-        }
-
-        .navigation-list-items li {
-          flex-shrink: 0;
-          /* Prevent links from shrinking */
+        .navigation-list li {
+            list-style: none;
         }
 
         .navigation-link {
-          padding: 0.5rem 0.75rem;
-          font-size: 0.875rem;
-          white-space: nowrap;
-          /* Keep link text on one line */
+            display: block;
+            padding: 0.5rem 1rem;
+            border-radius: 0.5rem;
+            font-weight: 500;
+            transition: background-color 0.2s;
+            color: var(--link-color);
+            text-decoration: none;
         }
 
-        .logo-container {
-          display: none;
-          /* Hide logo and footer links on mobile */
+        .navigation-link:hover {
+            background-color: var(--blue-800);
+            text-decoration: underline;
         }
 
-        .main-content {
-          padding: 1rem;
-        }
-      }
-
-      /* New CSS for print view */
-      @media print {
-
-        .sidebar,
-        .pagination-container,
-        .back-to-top-button {
-          display: none;
+        .navigation-link.active {
+            background-color: var(--blue-800);
         }
 
         .main-content {
-          margin: 0 !important;
-          padding: 0 !important;
-          width: 100% !important;
-          min-height: auto !important;
-          overflow: visible !important;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            padding: 2rem;
+            overflow-y: auto;
+        }
+
+        .content-wrapper {
+            max-width: 56rem;
+            margin: 0 auto;
+            width: 100%;
         }
 
         .content-container {
-          box-shadow: none;
-          padding: 0;
-          border-radius: 0;
+            background-color: white;
+            padding: 2rem;
+            border-radius: 0.75rem;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
         }
 
-        /* Ensure the content is visible on a white background */
-        body {
-          background-color: white;
+        /* Styles for markdown content, adjusted for contrast */
+        .content-container h1 {
+            font-size: 2.25rem;
+            font-weight: 700;
+            color: var(--gray-900);
+            margin-bottom: 1rem;
         }
-      }
+
+        .content-container h2 {
+            font-size: 1.875rem;
+            font-weight: 600;
+            color: var(--gray-800);
+            margin-top: 1.5rem;
+            margin-bottom: 0.75rem;
+        }
+
+        .content-container h3 {
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: var(--gray-800);
+            margin-top: 1.25rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .content-container p {
+            font-size: 1rem;
+            line-height: 1.75rem;
+            color: var(--gray-600);
+            margin-top: 1rem;
+            margin-bottom: 1rem;
+        }
+
+        .content-container ul {
+            list-style-type: disc;
+            margin-left: 1.5rem;
+            margin-top: 0.5rem;
+        }
+
+        .content-container ol {
+            list-style-type: decimal;
+            margin-left: 1.5rem;
+            margin-top: 0.5rem;
+        }
+
+        .content-container li {
+            margin-bottom: 0.25rem;
+        }
+
+        .content-container a {
+            color: var(--blue-700);
+            text-decoration: underline;
+        }
+
+        .content-container img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 0.5rem;
+            margin-top: 1rem;
+            margin-bottom: 1rem;
+        }
+
+        .content-container pre {
+            background-color: var(--gray-800);
+            color: white;
+            padding: 1rem;
+            border-radius: 0.5rem;
+            overflow: auto;
+            font-family: monospace;
+            /* Make it focusable for keyboard users */
+            outline: 2px solid transparent;
+            transition: outline-color 0.2s;
+        }
+
+        .content-container pre:focus-within {
+            outline-color: var(--blue-700);
+        }
+
+        .content-container code {
+            background-color: var(--gray-200);
+            padding: 0.25rem 0.5rem;
+            border-radius: 0.25rem;
+            font-weight: 600;
+            color: var(--gray-800);
+        }
+
+        .logo-container {
+            padding: 1rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            border-top: 1px solid rgba(255, 255, 255, 0.2);
+            margin-top: auto;
+            width: 100%;
+            box-sizing: border-box;
+            overflow: hidden;
+        }
+
+        .logo-container a {
+            width: 100%;
+            display: block;
+            text-align: center;
+        }
+
+        .logo-container svg {
+            width: auto;
+            height: auto;
+            max-width: 90%;
+            max-height: 2.5rem;
+            display: inline-block;
+            fill: currentColor;
+            overflow: visible;
+        }
+
+        /* Pagination and bottom links styles */
+        .pagination-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 2rem;
+            gap: 1rem;
+        }
+
+        .pagination-button {
+            padding: 0.5rem 1rem;
+            border-radius: 0.5rem;
+            background-color: white;
+            box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+            color: var(--gray-700);
+            transition: background-color 0.2s;
+            text-decoration: none;
+        }
+
+        .pagination-button:hover {
+            background-color: var(--gray-200);
+            text-decoration: underline;
+        }
+
+        .bottom-links-wrapper {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .improve-page-link {
+            font-size: 0.875rem;
+            color: var(--gray-700);
+            text-decoration: underline;
+        }
+
+        .improve-page-link:hover {
+            color: var(--blue-700);
+        }
+
+        .back-to-top-button {
+            padding: 0.5rem 1rem;
+            border-radius: 0.5rem;
+            background-color: transparent;
+            color: var(--gray-700);
+            transition: color 0.2s;
+            text-decoration: none;
+            font-size: 0.875rem;
+            font-weight: 500;
+        }
+
+        .back-to-top-button:hover {
+            color: var(--blue-700);
+            text-decoration: underline;
+        }
+        
+        /* Responsive CSS for mobile devices */
+        @media (max-width: 768px) {
+            body {
+                flex-direction: column;
+            }
+
+            .sidebar {
+                width: 100%;
+                box-shadow: none;
+                flex-direction: row;
+                flex-wrap: wrap;
+                padding: 0;
+            }
+
+            .sidebar-header {
+                padding: 1rem;
+            }
+
+            .sidebar-header h1 {
+                font-size: 1.25rem;
+            }
+
+            .sidebar-header p {
+                display: none;
+            }
+
+            .navigation-list {
+                flex-direction: row;
+                flex-wrap: nowrap;
+                overflow-x: auto;
+                -webkit-overflow-scrolling: touch;
+                padding: 0 1rem;
+                gap: 0;
+            }
+
+            .navigation-list-items {
+                display: flex;
+                list-style: none;
+                padding: 0;
+                margin: 0;
+                gap: 0.5rem;
+            }
+
+            .navigation-list-items li {
+                flex-shrink: 0;
+            }
+
+            .navigation-link {
+                padding: 0.5rem 0.75rem;
+                font-size: 0.875rem;
+                white-space: nowrap;
+            }
+
+            .logo-container {
+                display: none;
+            }
+
+            .main-content {
+                padding: 1rem;
+            }
+        }
+        
+        /* Print-friendly CSS to hide sidebar and footer */
+        @media print {
+            .sidebar,
+            .pagination-container,
+            .back-to-top-button,
+            .improve-page-link,
+            .bottom-links-wrapper {
+                display: none;
+            }
+
+            .main-content {
+                margin: 0 !important;
+                padding: 0 !important;
+                width: 100% !important;
+                min-height: auto !important;
+                overflow: visible !important;
+            }
+
+            .content-container {
+                box-shadow: none;
+                padding: 0;
+                border-radius: 0;
+            }
+
+            /* Ensure the content is visible on a white background */
+            body {
+                background-color: white;
+            }
+        }
     </style>
-  </head>
-  <body class="body-container">
+</head>
+<body class="body-container">
     <a href="#content-container" class="skip-link">Skip to main content</a>
-    <!-- Sidebar for navigation -->
+
     <aside id="sidebar" class="sidebar">
-      <div class="sidebar-header">
-        <h1>CivicActions' Open Practices</h1>
-        <p>Open Requirements Library</p>
-      </div>
-      <nav id="navigation" class="navigation-list scrollbar-hidden">
-        <ul class="navigation-list-items">
-          <!-- Navigation links will be populated here by JavaScript -->
-          <li>
-            <p style="color: var(--blue-100); font-size: 0.875rem; padding: 1rem; animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;">Loading navigation...</p>
-          </li>
-        </ul>
-      </nav>
-      <div class="logo-container">
-        <a href="https://civicactions.com/">
-          <svg xmlns="http://www.w3.org/2000/svg" width="1292" height="204" aria-labelledby="title" role="img">
-            <title id="title">CivicActions Logo</title>
-            <path d="M125.692 65.04H109.24c-5.024 0-7.53-2.514-7.516-7.542V46.356a18.33 18.33 0 0 0-5.017-13.103c-3.051-3.446-7.395-5.467-11.994-5.581H48.51c-4.584-.094-8.975 1.847-11.994 5.301a18.01 18.01 0 0 0-5.297 13.383v111.243a18.35 18.35 0 0 0 5.117 13.123c3.056 3.436 7.399 5.45 11.994 5.561h36.502a15.29 15.29 0 0 0 11.694-5.281 18.15 18.15 0 0 0 5.297-13.403v-11.422c0-4.741 2.499-7.262 7.516-7.262h16.172c5.017 0 7.516 2.521 7.516 7.262v11.422c.314 12.56-4.783 24.648-13.993 33.187-9.25 8.714-21.563 13.423-34.263 13.103H48.33c-12.608.272-24.817-4.435-33.983-13.103C4.93 182.368-.312 170.231.014 157.599V46.356C-.297 33.797 4.8 21.709 14.007 13.169 23.402 4.494 35.79-.202 48.57.066h36.222c12.7-.32 25.013 4.389 34.263 13.103 9.369 8.444 14.564 20.575 14.213 33.187v11.422c-.06 4.741-2.559 7.262-7.576 7.262zm49.016-24.165h-16.432c-5.017 0-7.536-2.521-7.536-7.242V20.511c0-4.741 2.519-7.242 7.536-7.242h16.432c5.017 0 7.536 2.501 7.536 7.242v13.063c.02 4.781-2.519 7.302-7.536 7.302h0zm0 163.014h-16.432c-5.017 0-7.536-2.501-7.536-7.242V65.58c0-4.741 2.519-7.262 7.536-7.262h16.432c5.017 0 7.536 2.521 7.536 7.262v131.047c.02 4.761-2.519 7.262-7.536 7.262h0zM482.993 87.344c-1.65 1.918-4.266 2.699-6.697 2-9.735-2.501-23.128-4.001-39.56-4.001a15.31 15.31 0 0 0-11.694 5.301 17.81 17.81 0 0 0-5.297 13.103v54.651a18.01 18.01 0 0 0 5.017 12.823 15.67 15.67 0 0 0 11.994 5.581c16.432 0 29.545-1.4 39.3-3.901 2.362-.809 4.978-.151 6.677 1.68 1.455 1.402 2.35 3.287 2.519 5.301v11.422c0 8.362-16.165 12.543-48.496 12.543-13.653 0-25.067-4.181-34.263-12.823-9.308-8.251-14.508-20.187-14.213-32.627v-54.611c-.249-12.304 4.858-24.108 13.993-32.347 9.386-8.676 21.768-13.372 34.543-13.103 32.331 0 48.496 4.181 48.496 12.543v11.442c-.162 1.894-.983 3.67-2.319 5.021h0zm179.91 110.143c0 4.181-2.219 6.401-6.957 6.401h-17.012c-3.825.312-7.332-2.14-8.356-5.841l-15.592-49.65h-63.888l-15.612 49.65a7.62 7.62 0 0 1-7.996 5.841H510.5c-4.738 0-6.977-2.22-6.977-6.401-.072-.68.024-1.367.28-2l59.63-189.6c1.016-3.709 4.525-6.171 8.356-5.861h22.849c3.831-.31 7.34 2.152 8.356 5.861l59.29 189.72c.323.577.507 1.22.54 1.88h.08zm-79.68-150.851l-23.148 74.155h46.177l-23.029-74.155zm181.269 40.708c-1.65 1.918-4.266 2.699-6.697 2-9.735-2.501-23.108-4.001-39.56-4.001a15.39 15.39 0 0 0-11.714 5.301 18.01 18.01 0 0 0-5.277 13.103v54.651a18.15 18.15 0 0 0 5.017 12.823 15.67 15.67 0 0 0 11.994 5.581c16.452 0 29.525-1.4 39.28-3.901 2.368-.807 4.989-.15 6.697 1.68 1.451 1.403 2.339 3.288 2.499 5.301v11.422c0 8.362-16.159 12.543-48.476 12.543-13.653 0-25.087-4.181-34.263-12.823-9.308-8.251-14.508-20.187-14.213-32.627v-54.611c-.241-12.302 4.864-24.104 13.993-32.347 9.395-8.675 21.782-13.371 34.563-13.103 32.331 0 48.489 4.181 48.476 12.543v11.442c-.173 1.907-1.025 3.689-2.399 5.021h.08zm82.199 115.724l-11.714.82c-13.653.84-25.067-3.061-34.543-12.263-9.292-8.724-14.456-20.979-14.213-33.727V29.072c0-4.001 3.338-6.701 9.755-8.102l13.373-1.66c2.098-.398 4.262.217 5.837 1.66 1.546 1.453 2.452 3.46 2.519 5.581v32.347h28.626c4.998 0 7.516 2.521 7.516 7.242v12.843c0 4.741-2.519 7.242-7.516 7.242h-28.706v71.675a18.41 18.41 0 0 0 5.017 13.103 15.73 15.73 0 0 0 11.994 5.561h11.714c4.998 0 7.516 2.521 7.516 7.262v12.002c.06 4.441-2.539 6.961-7.256 7.242h.08zm50.555-162.194h-18.951c-5.017 0-7.536-2.521-7.536-7.242V20.511c0-4.741 2.519-7.242 7.536-7.242h18.951c5.017 0 7.536 2.501 7.536 7.242v13.063c-.08 4.781-2.599 7.302-7.616 7.302h.08zm0 163.014h-16.432c-5.017 0-7.536-2.501-7.536-7.242V65.58c0-4.741 2.519-7.262 7.536-7.262h16.432c5.017 0 7.536 2.521 7.536 7.262v131.047c-.08 4.761-2.599 7.262-7.616 7.262h.08zm131.654-12.823c-9.425 8.595-21.817 13.193-34.563 12.823h-21.989c-12.572.367-24.783-4.24-33.983-12.823-9.314-8.246-14.516-20.186-14.213-32.627v-54.651c-.257-12.305 4.851-24.113 13.993-32.347 9.386-8.676 21.768-13.372 34.543-13.103h21.569c13.653 0 25.087 4.181 34.283 12.823 9.305 8.252 14.505 20.188 14.213 32.627v54.651c.269 12.376-4.809 24.267-13.933 32.627h.08zm-17.551-87.278a18.15 18.15 0 0 0-5.017-12.823c-3.062-3.43-7.4-5.448-11.994-5.581h-21.809c-4.586-.099-8.979 1.842-11.994 5.301a18.73 18.73 0 0 0-5.017 13.103l-.28 54.651a18.15 18.15 0 0 0 5.017 12.823 16.71 16.71 0 0 0 12.254 5.581h21.749a15.43 15.43 0 0 0 11.714-5.281 18.01 18.01 0 0 0 5.297-13.123l.08-54.651zm160.84 100.021h-16.412c-5.017 0-7.536-2.501-7.536-7.242v-92.779a18.15 18.15 0 0 0-5.017-12.823c-3.056-3.438-7.397-5.458-11.994-5.581h-21.809c-4.583-.088-8.972 1.851-11.994 5.301a17.87 17.87 0 0 0-5.277 13.103l.26 92.859c0 4.741-2.499 7.242-7.796 7.242h-16.152c-5.017 0-7.536-2.501-7.536-7.242v-92.859c-.251-12.385 4.849-24.277 13.993-32.627 9.425-8.595 21.817-13.193 34.563-12.823h21.729c13.653 0 25.087 4.181 34.263 12.823 9.305 8.252 14.505 20.188 14.213 32.627v92.859c-.06 4.741-2.559 7.242-7.576 7.242l.08-.08zm105.947-12.003c-9.475 8.002-20.91 12.003-34.563 12.003-32.331 0-48.489-4.181-48.476-12.543v-11.422c.133-1.881.918-3.657 2.219-5.021 1.573-2.034 4.267-2.839 6.697-2 9.755 2.521 22.849 3.901 39.56 3.901 4.381.167 8.665-1.326 11.994-4.181a15.19 15.19 0 0 0 5.017-11.702c0-4.181-2.239-7.542-6.697-10.322-.82-.28-5.017-2.24-12.534-5.581-17.831-7.802-28.146-12.823-31.204-14.783-9.657-6.255-15.401-17.057-15.192-28.566 0-13.103 4.738-23.705 13.993-31.507s20.89-11.722 34.543-11.722c31.784 0 47.67 4.181 47.656 12.543v11.442c-.14 1.883-.932 3.659-2.239 5.021-1.641 1.919-4.252 2.701-6.677 2a161.39 161.39 0 0 0-38.741-4.001c-4.465-.202-8.842 1.291-12.254 4.181a16.01 16.01 0 0 0-4.738 11.722c0 4.181 2.239 7.522 6.417 10.302a119.38 119.38 0 0 0 12.534 5.581c17.012 6.981 27.306 12.002 31.484 14.783 9.649 6.321 15.344 17.188 15.052 28.726-.06 13.123-4.798 23.445-13.993 31.247l.14-.1z" fill="#f9f9f7" />
-          </svg>
-        </a>
-        <ul>
-          <li>
-            <a href="https://civicactions.com/">CivicActions</a>
-          </li>
-          <li>
-            <a href="https://github.com/CivicActions/open-practice/">GitHub Repository</a>
-          </li>
-        </ul>
-      </div>
-    </aside>
-    <!-- Main content area -->
-    <main id="main-content" class="main-content scrollbar-hidden" tabindex="-1">
-      <div class="content-wrapper">
-        <article id="content-container" class="content-container">
-          <!-- Markdown content will be rendered here -->
-          <h1>Welcome</h1>
-          <p> Select a document from the navigation sidebar to get started. The content will appear here. </p>
-        </article>
-        <!-- Pagination/navigation for Next/Previous links -->
-        <div id="pagination-container" class="pagination-container">
-          <!-- Buttons will be populated by JavaScript -->
+        <div class="sidebar-header">
+            <h1>CivicActions' Open Practices</h1>
+            <p>Open Requirements Library</p>
         </div>
-      </div>
+        <nav id="navigation" class="navigation-list scrollbar-hidden">
+            <ul class="navigation-list-items">
+                <li>
+                    <p style="color: var(--blue-100); font-size: 0.875rem; padding: 1rem; animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;">Loading navigation...</p>
+                </li>
+            </ul>
+        </nav>
+        <div class="logo-container">
+            <a href="https://civicactions.com/">
+                <svg xmlns="http://www.w3.org/2000/svg" width="1292" height="204" aria-labelledby="title" role="img">
+                    <title id="title">CivicActions Logo</title>
+                    <path d="M125.692 65.04H109.24c-5.024 0-7.53-2.514-7.516-7.542V46.356a18.33 18.33 0 0 0-5.017-13.103c-3.051-3.446-7.395-5.467-11.994-5.581H48.51c-4.584-.094-8.975 1.847-11.994 5.301a18.01 18.01 0 0 0-5.297 13.383v111.243a18.35 18.35 0 0 0 5.117 13.123c3.056 3.436 7.399 5.45 11.994 5.561h36.502a15.29 15.29 0 0 0 11.694-5.281 18.15 18.15 0 0 0 5.297-13.403v-11.422c0-4.741 2.499-7.262 7.516-7.262h16.172c5.017 0 7.516 2.521 7.516 7.262v11.422c.314 12.56-4.783 24.648-13.993 33.187-9.25 8.714-21.563 13.423-34.263 13.103H48.33c-12.608.272-24.817-4.435-33.983-13.103C4.93 182.368-.312 170.231.014 157.599V46.356C-.297 33.797 4.8 21.709 14.007 13.169 23.402 4.494 35.79-.202 48.57.066h36.222c12.7-.32 25.013 4.389 34.263 13.103 9.369 8.444 14.564 20.575 14.213 33.187v11.422c-.06 4.741-2.559 7.262-7.576 7.262zm49.016-24.165h-16.432c-5.017 0-7.536-2.521-7.536-7.242V20.511c0-4.741 2.519-7.242 7.536-7.242h16.432c5.017 0 7.536 2.501 7.536 7.242v13.063c.02 4.781-2.519 7.302-7.536 7.302h0zm0 163.014h-16.432c-5.017 0-7.536-2.501-7.536-7.242V65.58c0-4.741 2.519-7.262 7.536-7.262h16.432c5.017 0 7.536 2.521 7.536 7.262v131.047c.02 4.761-2.519 7.262-7.536 7.262h0zM482.993 87.344c-1.65 1.918-4.266 2.699-6.697 2-9.735-2.501-23.128-4.001-39.56-4.001a15.31 15.31 0 0 0-11.694 5.301 17.81 17.81 0 0 0-5.297 13.103v54.651a18.01 18.01 0 0 0 5.017 12.823 15.67 15.67 0 0 0 11.994 5.581c16.432 0 29.545-1.4 39.3-3.901 2.362-.809 4.978-.151 6.677 1.68 1.455 1.402 2.35 3.287 2.519 5.301v11.422c0 8.362-16.165 12.543-48.496 12.543-13.653 0-25.067-4.181-34.263-12.823-9.308-8.251-14.508-20.187-14.213-32.627v-54.611c-.249-12.304 4.858-24.108 13.993-32.347 9.386-8.676 21.768-13.372 34.543-13.103 32.331 0 48.496 4.181 48.496 12.543v11.442c-.162 1.894-.983 3.67-2.319 5.021h0zm179.91 110.143c0 4.181-2.219 6.401-6.957 6.401h-17.012c-3.825.312-7.332-2.14-8.356-5.841l-15.592-49.65h-63.888l-15.612 49.65a7.62 7.62 0 0 1-7.996 5.841H510.5c-4.738 0-6.977-2.22-6.977-6.401-.072-.68.024-1.367.28-2l59.63-189.6c1.016-3.709 4.525-6.171 8.356-5.861h22.849c3.831-.31 7.34 2.152 8.356 5.861l59.29 189.72c.323.577.507 1.22.54 1.88h.08zm-79.68-150.851l-23.148 74.155h46.177l-23.029-74.155zm181.269 40.708c-1.65 1.918-4.266 2.699-6.697 2-9.735-2.501-23.108-4.001-39.56-4.001a15.39 15.39 0 0 0-11.714 5.301 18.01 18.01 0 0 0-5.277 13.103v54.651a18.15 18.15 0 0 0 5.017 12.823 15.67 15.67 0 0 0 11.994 5.581c16.452 0 29.525-1.4 39.28-3.901 2.368-.807 4.989-.15 6.697 1.68 1.451 1.403 2.339 3.288 2.499 5.301v11.422c0 8.362-16.159 12.543-48.476 12.543-13.653 0-25.087-4.181-34.263-12.823-9.308-8.251-14.508-20.187-14.213-32.627v-54.611c-.241-12.302 4.864-24.104 13.993-32.347 9.395-8.675 21.782-13.371 34.563-13.103 32.331 0 48.489 4.181 48.476 12.543v11.442c-.173 1.907-1.025 3.689-2.399 5.021h.08zm82.199 115.724l-11.714.82c-13.653.84-25.067-3.061-34.543-12.263-9.292-8.724-14.456-20.979-14.213-33.727V29.072c0-4.001 3.338-6.701 9.755-8.102l13.373-1.66c2.098-.398 4.262.217 5.837 1.66 1.546 1.453 2.452 3.46 2.519 5.581v32.347h28.626c4.998 0 7.516 2.521 7.516 7.242v12.843c0 4.741-2.519 7.242-7.516 7.242h-28.706v71.675a18.41 18.41 0 0 0 5.017 13.103 15.73 15.73 0 0 0 11.994 5.561h11.714c4.998 0 7.516 2.521 7.516 7.262v12.002c.06 4.441-2.539 6.961-7.256 7.242h.08zm50.555-162.194h-18.951c-5.017 0-7.536-2.521-7.536-7.242V20.511c0-4.741 2.519-7.242 7.536-7.242h18.951c5.017 0 7.536 2.501 7.536 7.242v13.063c-.08 4.781-2.599 7.302-7.616 7.302h.08zm0 163.014h-16.432c-5.017 0-7.536-2.501-7.536-7.242V65.58c0-4.741 2.519-7.262 7.536-7.262h16.432c5.017 0 7.536 2.521 7.536 7.262v131.047c-.08 4.761-2.599 7.262-7.616 7.262h.08zm131.654-12.823c-9.425 8.595-21.817 13.193-34.563 12.823h-21.989c-12.572.367-24.783-4.24-33.983-12.823-9.314-8.246-14.516-20.186-14.213-32.627v-54.651c-.257-12.305 4.851-24.113 13.993-32.347 9.386-8.676 21.768-13.372 34.543-13.103h21.569c13.653 0 25.087 4.181 34.283 12.823 9.305 8.252 14.505 20.188 14.213 32.627v54.651c.269 12.376-4.809 24.267-13.933 32.627h.08zm-17.551-87.278a18.15 18.15 0 0 0-5.017-12.823c-3.062-3.43-7.4-5.448-11.994-5.581h-21.809c-4.586-.099-8.979 1.842-11.994 5.301a18.73 18.73 0 0 0-5.017 13.103l-.28 54.651a18.15 18.15 0 0 0 5.017 12.823 16.71 16.71 0 0 0 12.254 5.581h21.749a15.43 15.43 0 0 0 11.714-5.281 18.01 18.01 0 0 0 5.297-13.123l.08-54.651zm160.84 100.021h-16.412c-5.017 0-7.536-2.501-7.536-7.242v-92.779a18.15 18.15 0 0 0-5.017-12.823c-3.056-3.438-7.397-5.458-11.994-5.581h-21.809c-4.583-.088-8.972 1.851-11.994 5.301a17.87 17.87 0 0 0-5.277 13.103l.26 92.859c0 4.741-2.499 7.242-7.796 7.242h-16.152c-5.017 0-7.536-2.501-7.536-7.242v-92.859c-.251-12.385 4.849-24.277 13.993-32.627 9.425-8.595 21.817-13.193 34.563-12.823h21.729c13.653 0 25.087 4.181 34.263 12.823 9.305 8.252 14.505 20.188 14.213 32.627v92.859c-.06 4.741-2.559 7.242-7.576 7.242l.08-.08zm105.947-12.003c-9.475 8.002-20.91 12.003-34.563 12.003-32.331 0-48.489-4.181-48.476-12.543v-11.422c.133-1.881.918-3.657 2.219-5.021 1.573-2.034 4.267-2.839 6.697-2 9.755 2.521 22.849 3.901 39.56 3.901 4.381.167 8.665-1.326 11.994-4.181a15.19 15.19 0 0 0 5.017-11.702c0-4.181-2.239-7.542-6.697-10.322-.82-.28-5.017-2.24-12.534-5.581-17.831-7.802-28.146-12.823-31.204-14.783-9.657-6.255-15.401-17.057-15.192-28.566 0-13.103 4.738-23.705 13.993-31.507s20.89-11.722 34.543-11.722c31.784 0 47.67 4.181 47.656 12.543v11.442c-.14 1.883-.932 3.659-2.239 5.021-1.641 1.919-4.252 2.701-6.677 2a161.39 161.39 0 0 0-38.741-4.001c-4.465-.202-8.842 1.291-12.254 4.181a16.01 16.01 0 0 0-4.738 11.722c0 4.181 2.239 7.522 6.417 10.302a119.38 119.38 0 0 0 12.534 5.581c17.012 6.981 27.306 12.002 31.484 14.783 9.649 6.321 15.344 17.188 15.052 28.726-.06 13.123-4.798 23.445-13.993 31.247l.14-.1z" fill="#f9f9f7"/>
+                </svg>
+            </a>
+            <ul>
+                <li><a href="https://civicactions.com/">CivicActions</a></li>
+                <li><a href="https://github.com/CivicActions/open-practice/">GitHub Repository</a></li>
+            </ul>
+        </div>
+    </aside>
+
+    <main id="main-content" class="main-content scrollbar-hidden" tabindex="-1">
+        <div class="content-wrapper">
+            <article id="content-container" class="content-container">
+                <h1>Welcome</h1>
+                <p>
+                    Select a document from the navigation sidebar to get started. The content will appear here.
+                </p>
+            </article>
+
+            <div id="pagination-container" class="pagination-container">
+                </div>
+        </div>
     </main>
-    <!-- JavaScript for dynamic content loading -->
+
     <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
     <script>
-      // Use an IIFE (Immediately Invoked Function Expression) to avoid global scope pollution
-      (async function() {
-        // Configuration for the repository and branch
-        const repoOwner = 'CivicActions';
-        const repoName = 'open-practice';
-        const branch = 'main';
-        const contentPath = 'open-requirements-library';
-        // DOM elements
-        const navigationContainer = document.getElementById('navigation').querySelector('ul');
-        const contentContainer = document.getElementById('content-container');
-        const paginationContainer = document.getElementById('pagination-container');
-        // Global variable to store the file list and current file index
-        let markdownFiles = [];
-        // Function to fetch the list of files from GitHub's API
-        async function fetchFileList() {
-          const url = `https://api.github.com/repos/${repoOwner}/${repoName}/contents/${contentPath}?ref=${branch}`;
-          try {
-            const response = await fetch(url);
-            if (!response.ok) {
-              throw new Error(`GitHub API error: ${response.statusText}`);
+        // Use an IIFE (Immediately Invoked Function Expression) to avoid global scope pollution
+        (async function() {
+            // Configuration for the repository and branch
+            const repoOwner = 'CivicActions';
+            const repoName = 'open-practice';
+            const branch = 'main';
+            const contentPath = 'open-requirements-library';
+
+            // DOM elements
+            const navigationContainer = document.getElementById('navigation').querySelector('ul');
+            const contentContainer = document.getElementById('content-container');
+            const paginationContainer = document.getElementById('pagination-container');
+            
+            // Global variable to store the file list and current file index
+            let markdownFiles = [];
+
+            // Function to fetch the list of files from GitHub's API
+            async function fetchFileList() {
+                const url = `https://api.github.com/repos/${repoOwner}/${repoName}/contents/${contentPath}?ref=${branch}`;
+                try {
+                    const response = await fetch(url);
+                    if (!response.ok) {
+                        throw new Error(`GitHub API error: ${response.statusText}`);
+                    }
+                    const files = await response.json();
+                    return files.filter(file => file.name.endsWith('.md'));
+                } catch (error) {
+                    console.error("Failed to fetch file list:", error);
+                    navigationContainer.innerHTML = '<li><p style="color: var(--blue-100); font-size: 0.875rem; padding: 1rem; animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;">Error loading files. Check console for details.</p></li>';
+                    return [];
+                }
             }
-            const files = await response.json();
-            return files.filter(file => file.name.endsWith('.md'));
-          } catch (error) {
-            console.error("Failed to fetch file list:", error);
-            navigationContainer.innerHTML = ' < li > < p style = "color: var(--blue-100); font-size: 0.875rem; padding: 1rem; animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;" > Error loading files.Check console
-            for details. < /p> < /li>';
-            return [];
-          }
-        }
-        // Function to fetch and render the content of a markdown file
-        async function fetchAndRenderMarkdown(filename) {
-          const index = markdownFiles.findIndex(file => file.name === filename);
-          const url = `https://raw.githubusercontent.com/${repoOwner}/${repoName}/${branch}/${contentPath}/${filename}`;
-          contentContainer.innerHTML = `
-						<p style="text-align: center; color: var(--gray-500); padding: 2rem 0;">Loading ${filename}...</p>`;
-          try {
-            const response = await fetch(url);
-            if (!response.ok) {
-              throw new Error(`Failed to fetch markdown file: ${response.statusText}`);
+
+            // Function to fetch and render the content of a markdown file
+            async function fetchAndRenderMarkdown(filename) {
+                const index = markdownFiles.findIndex(file => file.name === filename);
+                const url = `https://raw.githubusercontent.com/${repoOwner}/${repoName}/${branch}/${contentPath}/${filename}`;
+                contentContainer.innerHTML = `<p style="text-align: center; color: var(--gray-500); padding: 2rem 0;">Loading ${filename}...</p>`;
+                try {
+                    const response = await fetch(url);
+                    if (!response.ok) {
+                        throw new Error(`Failed to fetch markdown file: ${response.statusText}`);
+                    }
+                    const markdownText = await response.text();
+                    // Use marked.js to convert markdown to HTML
+                    const html = marked.parse(markdownText);
+                    contentContainer.innerHTML = html;
+                    
+                    // Add tabindex to pre tags for keyboard navigation
+                    document.querySelectorAll('pre').forEach(pre => {
+                        pre.setAttribute('tabindex', '0');
+                    });
+
+                    // Update the pagination links after content is loaded
+                    updatePagination(index);
+
+                    // Add a line here to update the active link after the content is loaded
+                    updateActiveLink(filename);
+        
+                    // Update the URL hash
+                    window.location.hash = filename;
+                    
+                    // Update the URL hash
+                    window.location.hash = filename;
+
+                    // Scroll to the top of the content area
+                    contentContainer.scrollTop = 0;
+                } catch (error) {
+                    console.error("Failed to fetch and render markdown:", error);
+                    contentContainer.innerHTML = `<p style="color: var(--blue-700); padding: 2rem 0;">Error loading content. Please try again later.</p>`;
+                    // Clear pagination on error
+                    paginationContainer.innerHTML = '';
+                }
             }
-            const markdownText = await response.text();
-            // Use marked.js to convert markdown to HTML
-            const html = marked.parse(markdownText);
-            contentContainer.innerHTML = html;
-            // Add tabindex to pre tags for keyboard navigation
-            document.querySelectorAll('pre').forEach(pre => {
-              pre.setAttribute('tabindex', '0');
-            });
-            // Update the pagination links after content is loaded
-            updatePagination(index);
-            // Add a line here to update the active link after the content is loaded
-            updateActiveLink(filename);
-            // Update the URL hash
-            window.location.hash = filename;
-            // Update the URL hash
-            window.location.hash = filename;
-            // Scroll to the top of the content area
-            contentContainer.scrollTop = 0;
-          } catch (error) {
-            console.error("Failed to fetch and render markdown:", error);
-            contentContainer.innerHTML = `
-						<p style="color: var(--blue-700); padding: 2rem 0;">Error loading content. Please try again later.</p>`;
-            // Clear pagination on error
-            paginationContainer.innerHTML = '';
-          }
-        }
-        // Function to update the pagination and footer links
-        function updatePagination(currentFileIndex) {
-          paginationContainer.innerHTML = ''; // Clear existing buttons
-          const prevFile = markdownFiles[currentFileIndex - 1];
-          const nextFile = markdownFiles[currentFileIndex + 1];
-          // Create a container for the navigation buttons
-          const navButtonsWrapper = document.createElement('div');
-          navButtonsWrapper.style.display = 'flex';
-          navButtonsWrapper.style.justifyContent = 'space-between';
-          navButtonsWrapper.style.width = '100%';
-          navButtonsWrapper.style.marginTop = '1rem';
-          // Create and append the "Previous" button if it exists
-          if (prevFile) {
-            const prevButton = document.createElement('a');
-            prevButton.href = `#${prevFile.name}`;
-            prevButton.textContent = '← Previous';
-            prevButton.classList.add('pagination-button');
-            prevButton.addEventListener('click', (e) => {
-              e.preventDefault();
-              fetchAndRenderMarkdown(prevFile.name);
-              updateActiveLink(prevFile.name);
-            });
-            navButtonsWrapper.appendChild(prevButton);
-          } else {
-            const spacer = document.createElement('div');
-            navButtonsWrapper.appendChild(spacer);
-          }
-          // Create and append the "Next" button if it exists
-          if (nextFile) {
-            const nextButton = document.createElement('a');
-            nextButton.href = `#${nextFile.name}`;
-            nextButton.textContent = 'Next →';
-            nextButton.classList.add('pagination-button');
-            nextButton.addEventListener('click', (e) => {
-              e.preventDefault();
-              fetchAndRenderMarkdown(nextFile.name);
-              updateActiveLink(nextFile.name);
-            });
-            navButtonsWrapper.appendChild(nextButton);
-          } else {
-            const spacer = document.createElement('div');
-            navButtonsWrapper.appendChild(spacer);
-          }
-          // Append the navigation buttons wrapper to the main container
-          paginationContainer.appendChild(navButtonsWrapper);
-          // Create a wrapper for the bottom links
-          const bottomLinksWrapper = document.createElement('div');
-          bottomLinksWrapper.classList.add('bottom-links-wrapper');
-          // Add the "Help improve this page" link
-          const improvePageLink = document.createElement('a');
-          const githubFileUrl = `https://github.com/${repoOwner}/${repoName}/blob/${branch}/${contentPath}/${markdownFiles[currentFileIndex].name}`;
-          improvePageLink.href = githubFileUrl;
-          improvePageLink.textContent = 'Help improve this page';
-          improvePageLink.target = '_blank'; // Open in a new tab
-          improvePageLink.classList.add('improve-page-link');
-          bottomLinksWrapper.appendChild(improvePageLink);
-          // Add the "Back to Top" button
-          const backToTopButton = document.createElement('a');
-          backToTopButton.href = '#top';
-          backToTopButton.textContent = 'Back to Top';
-          backToTopButton.classList.add('back-to-top-button');
-          backToTopButton.addEventListener('click', (e) => {
+            
+
+// Function to update the pagination and footer links
+function updatePagination(currentFileIndex) {
+    paginationContainer.innerHTML = ''; // Clear existing buttons
+
+    const prevFile = markdownFiles[currentFileIndex - 1];
+    const nextFile = markdownFiles[currentFileIndex + 1];
+
+    // Create a container for the navigation buttons
+    const navButtonsWrapper = document.createElement('div');
+    navButtonsWrapper.style.display = 'flex';
+    navButtonsWrapper.style.justifyContent = 'space-between';
+    navButtonsWrapper.style.width = '100%';
+    navButtonsWrapper.style.marginTop = '1rem';
+    
+    // Create and append the "Previous" button if it exists
+    if (prevFile) {
+        const prevButton = document.createElement('a');
+        prevButton.href = `#${prevFile.name}`;
+        prevButton.textContent = '← Previous';
+        prevButton.classList.add('pagination-button');
+        prevButton.addEventListener('click', (e) => {
             e.preventDefault();
-            document.querySelector('body').scrollIntoView({
-              behavior: 'smooth'
-            });
-          });
-          bottomLinksWrapper.appendChild(backToTopButton);
-          // Append the bottom links wrapper
-          paginationContainer.appendChild(bottomLinksWrapper);
-        }
-        // Function to update the active state of a link in the sidebar
-        function updateActiveLink(filename) {
-          const currentActive = navigationContainer.querySelector('.active');
-          if (currentActive) {
-            currentActive.classList.remove('active');
-          }
-          const newActiveLink = navigationContainer.querySelector(`a[data-filename="${filename}"]`);
-          if (newActiveLink) {
-            newActiveLink.classList.add('active');
-          }
-        }
-        // Main function to initialize the app
-        async function initialize() {
-          markdownFiles = await fetchFileList();
-          if (markdownFiles.length === 0) {
-            navigationContainer.innerHTML = ' < li > < p style = "color: var(--blue-100); font-size: 0.875rem; padding: 1rem; animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;" > No markdown files found. < /p> < /li>';
-            return;
-          }
-          // New: Sort the files alphabetically, case-insensitively
-          markdownFiles.sort((a, b) => a.name.localeCompare(b.name));
-          // New: Find README.md and move it to the front
-          const readmeIndex = markdownFiles.findIndex(file => file.name.toLowerCase() === 'readme.md');
-          if (readmeIndex > -1) {
-            const readmeFile = markdownFiles.splice(readmeIndex, 1)[0];
-            markdownFiles.unshift(readmeFile);
-          }
-          // Clear the loading message
-          navigationContainer.innerHTML = '';
-          // Build navigation links
-          markdownFiles.forEach((file) => {
-            const listItem = document.createElement('li');
-            const link = document.createElement('a');
-            link.href = `#${file.name}`;
-            link.textContent = file.name.replace('.md', '').split('-').map(word => word.charAt(0).toUpperCase() + word.slice(1)).join(' ');
-            link.classList.add('navigation-link');
-            link.setAttribute('data-filename', file.name);
-            // Add click event listener to each link
-            link.addEventListener('click', (event) => {
-              event.preventDefault();
-              fetchAndRenderMarkdown(file.name);
-              updateActiveLink(file.name);
-            });
-            listItem.appendChild(link);
-            navigationContainer.appendChild(listItem);
-          });
-          // Load content based on URL hash or default to the README.md file
-          const initialFile = window.location.hash.slice(1) || 'README.md';
-          if (initialFile) {
-            fetchAndRenderMarkdown(initialFile);
-            updateActiveLink(initialFile);
-          }
-        }
-        // Add a hashchange listener for back/forward buttons
-        window.addEventListener('hashchange', () => {
-          const newHash = window.location.hash.slice(1);
-          if (newHash) {
-            fetchAndRenderMarkdown(newHash);
-            updateActiveLink(newHash);
-          }
+            fetchAndRenderMarkdown(prevFile.name);
+            updateActiveLink(prevFile.name);
         });
-        // Start the application
-        initialize();
-      })();
+        navButtonsWrapper.appendChild(prevButton);
+    } else {
+        const spacer = document.createElement('div');
+        navButtonsWrapper.appendChild(spacer);
+    }
+
+    // Create and append the "Next" button if it exists
+    if (nextFile) {
+        const nextButton = document.createElement('a');
+        nextButton.href = `#${nextFile.name}`;
+        nextButton.textContent = 'Next →';
+        nextButton.classList.add('pagination-button');
+        nextButton.addEventListener('click', (e) => {
+            e.preventDefault();
+            fetchAndRenderMarkdown(nextFile.name);
+            updateActiveLink(nextFile.name);
+        });
+        navButtonsWrapper.appendChild(nextButton);
+    } else {
+        const spacer = document.createElement('div');
+        navButtonsWrapper.appendChild(spacer);
+    }
+
+    // Append the navigation buttons wrapper to the main container
+    paginationContainer.appendChild(navButtonsWrapper);
+
+    // Create a wrapper for the bottom links
+    const bottomLinksWrapper = document.createElement('div');
+    bottomLinksWrapper.classList.add('bottom-links-wrapper');
+
+    // Add the "Help improve this page" link
+    const improvePageLink = document.createElement('a');
+    const githubFileUrl = `https://github.com/${repoOwner}/${repoName}/blob/${branch}/${contentPath}/${markdownFiles[currentFileIndex].name}`;
+    improvePageLink.href = githubFileUrl;
+    improvePageLink.textContent = 'Help improve this page';
+    improvePageLink.target = '_blank'; // Open in a new tab
+    improvePageLink.classList.add('improve-page-link');
+    bottomLinksWrapper.appendChild(improvePageLink);
+
+    // Add the "Back to Top" button
+    const backToTopButton = document.createElement('a');
+    backToTopButton.href = '#top';
+    backToTopButton.textContent = 'Back to Top';
+    backToTopButton.classList.add('back-to-top-button');
+    backToTopButton.addEventListener('click', (e) => {
+        e.preventDefault();
+        document.querySelector('body').scrollIntoView({ behavior: 'smooth' });
+    });
+    bottomLinksWrapper.appendChild(backToTopButton);
+    
+    // Append the bottom links wrapper
+    paginationContainer.appendChild(bottomLinksWrapper);
+}
+
+            
+
+            // Function to update the active state of a link in the sidebar
+            function updateActiveLink(filename) {
+                const currentActive = navigationContainer.querySelector('.active');
+                if (currentActive) {
+                    currentActive.classList.remove('active');
+                }
+                const newActiveLink = navigationContainer.querySelector(`a[data-filename="${filename}"]`);
+                if (newActiveLink) {
+                    newActiveLink.classList.add('active');
+                }
+            }
+
+// Main function to initialize the app
+async function initialize() {
+    markdownFiles = await fetchFileList();
+
+    if (markdownFiles.length === 0) {
+        navigationContainer.innerHTML = '<li><p style="color: var(--blue-100); font-size: 0.875rem; padding: 1rem; animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;">No markdown files found.</p></li>';
+        return;
+    }
+
+    // New: Sort the files alphabetically, case-insensitively
+    markdownFiles.sort((a, b) => a.name.localeCompare(b.name));
+    
+    // New: Find README.md and move it to the front
+    const readmeIndex = markdownFiles.findIndex(file => file.name.toLowerCase() === 'readme.md');
+    if (readmeIndex > -1) {
+        const readmeFile = markdownFiles.splice(readmeIndex, 1)[0];
+        markdownFiles.unshift(readmeFile);
+    }
+    
+    // Clear the loading message
+    navigationContainer.innerHTML = '';
+
+    // Build navigation links
+    markdownFiles.forEach((file) => {
+        const listItem = document.createElement('li');
+        const link = document.createElement('a');
+        link.href = `#${file.name}`;
+        link.textContent = file.name.replace('.md', '').split('-').map(word => word.charAt(0).toUpperCase() + word.slice(1)).join(' ');
+        link.classList.add('navigation-link');
+        link.setAttribute('data-filename', file.name);
+        
+        // Add click event listener to each link
+        link.addEventListener('click', (event) => {
+            event.preventDefault();
+            fetchAndRenderMarkdown(file.name);
+            updateActiveLink(file.name);
+        });
+        
+        listItem.appendChild(link);
+        navigationContainer.appendChild(listItem);
+    });
+    
+    // Load content based on URL hash or default to the README.md file
+    const initialFile = window.location.hash.slice(1) || 'README.md';
+    if (initialFile) {
+        fetchAndRenderMarkdown(initialFile);
+        updateActiveLink(initialFile);
+    }
+}
+            
+            // Add a hashchange listener for back/forward buttons
+            window.addEventListener('hashchange', () => {
+                const newHash = window.location.hash.slice(1);
+                if (newHash) {
+                    fetchAndRenderMarkdown(newHash);
+                    updateActiveLink(newHash);
+                }
+            });
+            
+            // Start the application
+            initialize();
+        })();
     </script>
-  </body>
+</body>
 </html>
