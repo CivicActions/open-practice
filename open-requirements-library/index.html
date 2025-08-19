@@ -223,6 +223,97 @@
             max-height: 100%; /* Ensure it doesn't exceed container height */
             display: block; /* Remove any default spacing */
         }
+
+/* On mobile, we stack the content and sidebar vertically */
+@media (max-width: 768px) {
+    body {
+        flex-direction: column;
+    }
+
+    .sidebar {
+        width: 100%;
+        box-shadow: none; /* Remove shadow on mobile */
+        flex-direction: row; /* Stack header and nav horizontally */
+        flex-wrap: wrap; /* Allow wrapping */
+        padding: 0;
+    }
+
+    .sidebar-header {
+        padding: 1rem;
+    }
+    
+    .sidebar-header h1 {
+        font-size: 1.25rem;
+    }
+    
+    .sidebar-header p {
+        display: none; /* Hide the subtitle on small screens */
+    }
+
+    .navigation-list {
+        flex-direction: row;
+        flex-wrap: nowrap;
+        overflow-x: auto; /* Allow horizontal scrolling */
+        -webkit-overflow-scrolling: touch;
+        padding: 0 1rem;
+        gap: 0;
+    }
+
+    .navigation-list-items {
+        display: flex;
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        gap: 0.5rem;
+    }
+
+    .navigation-list-items li {
+        flex-shrink: 0; /* Prevent links from shrinking */
+    }
+    
+    .navigation-link {
+        padding: 0.5rem 0.75rem;
+        font-size: 0.875rem;
+        white-space: nowrap; /* Keep link text on one line */
+    }
+    
+    .logo-container {
+        display: none; /* Hide logo and footer links on mobile */
+    }
+    
+    .main-content {
+        padding: 1rem;
+    }
+}
+
+        /* New CSS for print view */
+@media print {
+    .sidebar,
+    .pagination-container,
+    .back-to-top-button {
+        display: none;
+    }
+    
+    .main-content {
+        margin: 0 !important;
+        padding: 0 !important;
+        width: 100% !important;
+        min-height: auto !important;
+        overflow: visible !important;
+    }
+    
+    .content-container {
+        box-shadow: none;
+        padding: 0;
+        border-radius: 0;
+    }
+    
+    /* Ensure the content is visible on a white background */
+    body {
+        background-color: white;
+    }
+}
+        
     </style>
 </head>
 <body class="body-container">
@@ -441,7 +532,8 @@
                 });
                 
                 // Load content based on URL hash or default to the first file
-                const initialFile = window.location.hash.slice(1) || markdownFiles[0]?.name;
+                // const initialFile = window.location.hash.slice(1) || markdownFiles[0]?.name;
+                const initialFile = window.location.hash.slice(1) || 'README.md';
                 if (initialFile) {
                     fetchAndRenderMarkdown(initialFile);
                     updateActiveLink(initialFile);
