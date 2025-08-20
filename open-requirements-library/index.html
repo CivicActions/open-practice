@@ -376,18 +376,9 @@
         
         /* Styles for the modal overlay */
         .sidebar-overlay {
-          /* This ensures the overlay is completely hidden and not just transparent */
           display: none;
-          /* Adds a smooth transition for the opacity, so it doesn't just pop up */
           opacity: 0;
           transition: opacity 0.3s ease-in-out;
-          position: fixed;
-          top: 0;
-          left: 0;
-          width: 100%;
-          height: 100%;
-          background-color: rgba(0, 0, 0, 0.5);
-          z-index: 90;
         }
 
         /* We'll use this class to make the overlay visible on mobile */
@@ -743,7 +734,6 @@
             }
         }
 
-        // Main function to initialize the app
 // Main function to initialize the app
 async function initialize() {
     markdownFiles = await fetchFileList();
@@ -799,6 +789,8 @@ async function initialize() {
     
     // Once everything is loaded, remove the initial loading state
     document.body.classList.remove('page-loading');
+    sidebarOverlay.classList.remove('is-active');
+
 }
 
         
