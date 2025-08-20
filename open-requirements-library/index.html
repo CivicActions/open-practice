@@ -451,43 +451,21 @@
                 padding: 1rem;
             }
 
-/* Bottom-left floating box that stays put on scroll */
 .stickycontainer {
-  position: fixed;                 /* change from sticky to fixed */
+  position: fixed;
   bottom: max(1rem, env(safe-area-inset-bottom));
   left:   max(1rem, env(safe-area-inset-left));
-  z-index: 1000;                   /* above page content */
-  background: rgba(0,0,0,0.85);    /* optional: readable backdrop */
+  z-index: 10000;
+  background: rgba(0,0,0,0.85);
   color: #fff;
   padding: 0.75rem 1rem;
   border-radius: 0.5rem;
   box-shadow: 0 8px 24px rgba(0,0,0,0.25);
 }
-
-/* Make inner bits behave in a small box */
-.stickycontainer .logo-container svg {
-  display: block;
-  height: 32px;        /* adjust as needed */
-  width: auto;
-}
-
-.stickycontainer .navigation-list {
-  margin: 0.5rem 0 0;
-  padding: 0;
-}
-
-.stickycontainer .navigation-list-items {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-
-.stickycontainer .navigation-link {
-  color: #fff;
-  text-decoration: underline;
-}
-
-/* Optional: keep it from covering content on very small screens */
+.stickycontainer .logo-container svg { display: block; height: 32px; width: auto; }
+.stickycontainer .navigation-list { margin: 0.5rem 0 0; padding: 0; }
+.stickycontainer .navigation-list-items { list-style: none; margin: 0; padding: 0; }
+.stickycontainer .navigation-link { color: #fff; text-decoration: underline; }
 @media (max-width: 480px) {
   .stickycontainer {
     bottom: max(0.5rem, env(safe-area-inset-bottom));
@@ -495,6 +473,7 @@
     right:  max(0.5rem, env(safe-area-inset-right));
   }
 }
+@media print { .stickycontainer { display: none !important; } }
             
         }
         
@@ -550,6 +529,8 @@
                 </li>
             </ul>
         </nav>
+    </aside>
+
         <div class="stickycontainer">
         <div class="logo-container">
             <a href="https://civicactions.com/">
@@ -563,8 +544,7 @@
             </ul>
         </nav>
         </div>
-    </aside>
-
+    
     <main id="main-content" class="main-content" tabindex="-1">
         <div class="content-wrapper">
             <article id="content-container" class="content-container">
