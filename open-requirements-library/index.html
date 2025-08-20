@@ -464,11 +464,13 @@
                 padding: 1rem;
             }
 
-            .new-sticky-container {
-              position: sticky;
-              bottom: 0; /* Sticks to the bottom of the viewport */
-              /* left: 0; */
-            }
+.new-sticky-container {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000; /* Optional: Adjust if needed to layer on top of other elements */
+}
             
         }
         
