@@ -395,12 +395,6 @@
           display: block; /* We'll use JS to add and remove this */
           opacity: 1;
         }
-
-        /* A new class to hide elements until the page is ready */
-        .page-loading .hamburger-menu,
-        .page-loading .sidebar-overlay {
-            display: none !important;
-        }
         
         /* Responsive CSS for mobile devices */
         @media (max-width: 768px) {
@@ -420,6 +414,16 @@
                 box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
                 flex-direction: column;
             }
+
+        /* A new class to hide elements on desktop */
+        .page-loading .hamburger-menu,
+        .page-loading .sidebar-overlay {
+            display: none !important;
+        }
+        .sidebar-overlay {
+          display: none;
+          opacity: 0;
+        }
             
             /* Show the hamburger menu button on mobile */
             .hamburger-menu {
