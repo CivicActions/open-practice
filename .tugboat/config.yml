@@ -21,11 +21,14 @@ services:
         # Change this if you specify a different root for your public site.
         - ln -snf "${TUGBOAT_ROOT}/open-requirements-library" "${DOCROOT}"
 
-      # Run any commands needed to build the site.
-      build:
         # Error occurred when implementing Tugboat preview.
         # Solution: Inject .htaccess file to mimic GitHub pages behavior with URLs.
         # Solution from: https://serverfault.com/questions/989333/using-apache-rewrite-rules-in-htaccess-to-remove-html-causing-a-500-error.
         - echo "RewriteEngine On" > open-requirements-library/.htaccess
         - echo "RewriteCond %{DOCUMENT_ROOT}%{REQUEST_URI}.html -f" >> open-requirements-library/.htaccess
         - echo "RewriteRule "'!'"\.\w{2,4}$ %{REQUEST_URI}.html [L]" >> open-requirements-library/.htaccess
+
+      # Run any commands needed to build the site.
+      build:
+        # Switch the branch in index.html to match the PR branch
+        - sed -i "s/const branch = 'main';/const branch = '$TUGBOAT_GITHUB_HEAD';/g" open-requirements-library/index.html
