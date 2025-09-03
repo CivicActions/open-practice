@@ -31,4 +31,4 @@ services:
       # Run any commands needed to build the site.
       build:
         # Switch the branch in index.html to match the PR branch
-        - sed -i "s/const branch = 'main';/const branch = '$TUGBOAT_GITHUB_HEAD';/g" open-requirements-library/index.html
+        - if [ -n "$TUGBOAT_GITHUB_HEAD" ]; then sed -i "s/const branch = 'main';/const branch = '$TUGBOAT_GITHUB_HEAD';/g" open-requirements-library/index.html; fi
