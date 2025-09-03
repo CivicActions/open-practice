@@ -1,0 +1,31 @@
+services:
+  # What to call the service hosting the site. Because there is only
+  # one service, it is automatically set as the default service, which
+  # does a few things
+  #   1. Clones the git repository into the service container
+  #   2. Exposes port 80 to the Tugboat HTTP proxy
+  #   3. Routes requests to the preview URL to this service
+  apache:
+    # Use the available version of Apache by not specifying a version
+    image: tugboatqa/httpd
+
+    # A set of commands to run while building this service
+    commands:
+      # Commands that set up the basic preview infrastructure
+      init:
+        # Turn on URL rewriting.
+        - sed -i 's/AllowOverride None/AllowOverride All/' /usr/local/apache2/conf/httpd.conf
+        - sed -i 's/#LoadModule rewrite_module modules\/mod_rewrite\.so/LoadModule rewrite_module modules\/mod_rewrite\.so/' /usr/local/apache2/conf/httpd.conf
+
+        # Set the webroot for the open-requirements-library folder.
+        # Change this if you specify a different root for your public site.
+        - ln -snf "${TUGBOAT_ROOT}/open-requirements-library" "${DOCROOT}"
+
+      # Run any commands needed to build the site.
+      build:
+        # Error occurred when implementing Tugboat preview.
+        # Solution: Inject .htaccess file to mimic GitHub pages behavior with URLs.
+        # Solution from: https://serverfault.com/questions/989333/using-apache-rewrite-rules-in-htaccess-to-remove-html-causing-a-500-error.
+        - echo "RewriteEngine On" > open-requirements-library/.htaccess
+        - echo "RewriteCond %{DOCUMENT_ROOT}%{REQUEST_URI}.html -f" >> open-requirements-library/.htaccess
+        - echo "RewriteRule "'!'"\.\w{2,4}$ %{REQUEST_URI}.html [L]" >> open-requirements-library/.htaccess
