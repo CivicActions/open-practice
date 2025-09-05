@@ -267,55 +267,35 @@ Your proposal should address the full scope of services detailed in the "Terms o
 
 **Table of Contents**
 
-**[1\. Introduction to \[\*\*ORGANIZATION NAME\] and Background	2](#1.-introduction-to-[**organization-name]-and-background)**
+**1. Introduction to ORGANIZATION NAME and Background**
 
-[**2\. Mission Statement and Objectives	3**](#2.-mission-statement-and-objectives)
+**2. Mission Statement and Objectives**
+ 2.1 Business Objectives
+ 2.2 Critical Requirements
 
-[2.1 Business Objectives	3](#2.1-business-objectives)
+**3. Scope of Work**
+ 3.1 Specific Services
+ 3.2 Requirements
+  3.2.1 Overview
+  3.2.2 Website “Online Platform” Design Requirements
+  3.2.3 Online Platform Functional Requirements
+  3.2.4 Online Platform Non-Functional Requirements
+  3.2.5 CMS Requirements
+  3.2.6 Hosting Requirements
+  3.2.7 Maintenance and Support Requirements
+  3.2.8 Training and Documentation Requirements
+ 3.3 Deliverables and Timeline
+ 3.4 Logistics and Acceptance
 
-[2.1 Critical Requirements	3](#2.1-critical-requirements)
+**4. Project Management and Methodology**
+ 4.1 Project Management
+ 4.2 Reporting
+ 4.3 Methodology
+ 4.4 Acceptance
 
-[**3 Scope of Work	3**](#3-scope-of-work)
-
-[3.1 Specific Services	3](#3.1-specific-services)
-
-[3.2 Requirements	4](#3.2-requirements)
-
-[3.2.1 Overview	4](#3.2.1-overview)
-
-[3.2.2 Website “Online Platform” Design Requirements	4](#3.2.2-website-“online-platform”-design-requirements)
-
-[3.2.3 Online Platform Functional Requirements	5](#3.2.3-online-platform-functional-requirements)
-
-[3.2.4 Online Platform Non-Functional Requirements	5](#3.2.4-online-platform-non-functional-requirements)
-
-[3.2.5 CMS Requirements	6](#3.2.5-cms-requirements)
-
-[3.2.6 Hosting Requirements	8](#3.2.6-hosting-requirements)
-
-[3.2.7 Maintenance and Support Requirements	9](#3.2.7-maintenance-and-support-requirements)
-
-[3.2.8 Training and Documentation Requirements	9](#3.2.8-training-and-documentation-requirements)
-
-[3.3 Deliverables and Timeline	10](#3.3-deliverables-and-timeline)
-
-[3.4 Logistics and Acceptance	10](#3.4-logistics-and-acceptance)
-
-[**4\. Project Management and Methodology	11**](#4.-project-management-and-methodology)
-
-[4.1 Project Management	11](#4.1-project-management)
-
-[4.2 Reporting	11](#4.2-reporting)
-
-[4.3 Methodology	11](#4.3-methodology)
-
-[4.4 Acceptance	11](#4.4-acceptance)
-
-[**5\. Requirements for vendor and personnel	12**](#5.-requirements-for-vendor-and-personnel)
-
-[5.1 Vendor requirements	12](#5.1-vendor-requirements)
-
-[5.2 Vendor personnel requirements	12](#5.2-vendor-personnel-requirements)
+**5. Requirements for Vendor and Personnel**
+ 5.1 Vendor Requirements
+ 5.2 Vendor Personnel Requirements
 
 # 1\. Introduction to \[\*\*ORGANIZATION NAME\] and Background 
 
