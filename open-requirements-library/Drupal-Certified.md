@@ -1,7 +1,12 @@
 # Supplemental Resource Guide
 
-* [Open Source CMS RFP & Procurement Guide](#bookmark=id.qcuzhmojty2)  
-* [RFP Vendor Instructions: A step-by-step guide on how to best approach vendors](#terms-of-reference-\(annex-a\))
+* Open Source CMS RFP & Procurement Guide
+* RFP Vendor Instructions: A step-by-step guide on how to best approach vendors
+
+Based on the [Drupal Association's](https://www.drupal.org/association/) [How to Write an RFP for Open Source Solutions: Featuring Drupal Certified Partners](https://www.drupal.org/association/blog/how-to-write-an-rfp-for-open-source-solutions-featuring-drupal-certified-partners)
+
+
+___
 
 # Open source CMS RFP and procurement guide
 
@@ -250,7 +255,7 @@ Your proposal should address the full scope of services detailed in the "Terms o
 
 # ![your-logo-here-aalesund][image1]
 
-# TERMS OF REFERENCE (ANNEX A) {#terms-of-reference-(annex-a)}
+# TERMS OF REFERENCE (ANNEX A) 
 
 **\[\*\*ORGANIZATION NAME\]**
 
@@ -312,13 +317,13 @@ Your proposal should address the full scope of services detailed in the "Terms o
 
 [5.2 Vendor personnel requirements	12](#5.2-vendor-personnel-requirements)
 
-# 1\. Introduction to \[\*\*ORGANIZATION NAME\] and Background {#1.-introduction-to-[**organization-name]-and-background}
+# 1\. Introduction to \[\*\*ORGANIZATION NAME\] and Background 
 
 \[\*\*Give an overview of your organization and market to give potential vendors the information they need to assess your project in the context of industry and goals.\]
 
-# 2\. Mission Statement and Objectives {#2.-mission-statement-and-objectives}
+# 2\. Mission Statement and Objectives 
 
-## 2.1 Business Objectives {#2.1-business-objectives}
+## 2.1 Business Objectives 
 
 \[\*\*ORGANIZATION NAME\] seeks innovative and capable web solutions providers for its web CMS requirements. The solution will help the organization achieve the following business goals: 
 
@@ -332,7 +337,7 @@ Your proposal should address the full scope of services detailed in the "Terms o
 
 Examples: automating 80% of site operations to reduce site maintenance costs; removing an IT bottleneck to empower marketers to control digital marketing initiatives; managing social content to drive traffic; increasing customer community engagement by 25%; integrating CRM with Web CMS to personalize content delivery; ease of multichannel delivery, etc.
 
-## 2.1 Critical Requirements {#2.1-critical-requirements}
+## 2.1 Critical Requirements 
 
 \[\*\*ORGANIZATION NAME\] requires that the web CMS software has the following:
 
@@ -342,9 +347,9 @@ Examples: automating 80% of site operations to reduce site maintenance costs; re
 
 * \[\*\*Must Have 3\]
 
-# 3 Scope of Work {#3-scope-of-work}
+# 3 Scope of Work
 
-## 3.1 Specific Services {#3.1-specific-services}
+## 3.1 Specific Services 
 
 To meet the objectives specified in section 2 above, the vendor is expected to perform at least the following specific services:
 
@@ -362,9 +367,9 @@ To meet the objectives specified in section 2 above, the vendor is expected to 
 
 7. Support, Maintenance, and Ongoing Management
 
-## 3.2 Requirements {#3.2-requirements}
+## 3.2 Requirements
 
-### 3.2.1 Overview {#3.2.1-overview}
+### 3.2.1 Overview
 
 The following sections act as detailed reference of the requirements of this online platform.
 
@@ -378,116 +383,115 @@ For Vendor response, please fill out:
 
 3. Functionality Not Provided
 
-### 3.2.2 Website “Online Platform” Design Requirements {#3.2.2-website-“online-platform”-design-requirements}
+### 3.2.2 Website “Online Platform” Design Requirements
 
 | Requirement Identifier | Requirement | Vendor Compliance / Comments |
 | ----- | ----- | :---: |
-|  | The website must support multiple languages other than English, and the design will support right-to-left languages. |  |
-|  | The website should be implemented using responsive design techniques and allow users to interact with it on desktop and mobile versions (smartphone, tablet).	 |  |
-|  | The redesigned website should reflect \[\*\*ORGANIZATION NAME\]’s objectives while offering an easy-to-use user interface.	 |  |
-|  | The website’s structure and their logical representation of information should be optimized for different platforms (browsers, search engine bots, etc.) and devices: desktop, mobile, tablets, etc. |  |
-|  | The front page of the website should be clear and understandable, reflect the most recent information, and offer the latest ways of searching for information resources and services. |  |
-|  | Fast-loading pages: The website must be designed with a balance of text and graphics so that the average page loads on the average computer in an acceptable amount of time. |  |
-|  | Future flexibility:The site should include a flexible design template that easily accommodates the addition of new functionality later on.	 |  |
+| REQ 1 | The website must support multiple languages other than English, and the design will support right-to-left languages. |  |
+| REQ 2 | The website should be implemented using responsive design techniques and allow users to interact with it on desktop and mobile versions (smartphone, tablet).	 |  |
+| REQ 3 | The redesigned website should reflect \[\*\*ORGANIZATION NAME\]’s objectives while offering an easy-to-use user interface.	 
+| REQ 4 | The website’s structure and their logical representation of information should be optimized for different platforms (browsers, search engine bots, etc.) and devices: desktop, mobile, tablets, etc. |  |
+| REQ 5 | The front page of the website should be clear and understandable, reflect the most recent information, and offer the latest ways of searching for information resources and services. |  |
+| REQ 6 | Fast-loading pages: The website must be designed with a balance of text and graphics so that the average page loads on the average computer in an acceptable amount of time. |  |
+| REQ 7 | Future flexibility:The site should include a flexible design template that easily accommodates the addition of new functionality later on.	 |  |
 
-### 3.2.3 Online Platform Functional Requirements  {#3.2.3-online-platform-functional-requirements}
-
-| Requirement Identifier | Requirement | Vendor Compliance / Comments |
-| ----- | ----- | :---: |
-|  | \[\*\*List functional requirements here\] |  |
-|  |  |  |
-|  |  |  |
-
-### 3.2.4 Online Platform Non-Functional Requirements {#3.2.4-online-platform-non-functional-requirements}
+### 3.2.3 Online Platform Functional Requirements
 
 | Requirement Identifier | Requirement | Vendor Compliance / Comments |
 | ----- | ----- | :---: |
-|  | **Search Engine Optimization** The site’s public content must be optimized for search engines. Search Engine Optimization must be applied to all on-site optimizations, including, but not limited to, meta tags, the site’s structure, semantic tags, an XML sitemap, the site’s verification, Open Graph tags, a friendly and readable URL structure, page titles, alt and title attributes, preventing duplicate content, and RDF. |  |
-|  | **Compatibility** The site must be accessible and usable with current versions of commonly used browsers, including, but not limited to, IE8+, Google Chrome, Safari, Opera, and Firefox, across the most widely used operating environments.	 |  |
-|  | **Site Performance** The site must be optimized for performance with minimal page load times. To optimize performance, caching mechanisms must be applied to logged-in and anonymous users. The site must pass Google Page Speed tests. Performance tuning must be applied both server-side and client-side. |  |
-|  | **Security** The site must be tuned for strict security measures, including all prevention mechanisms for OWASP Top 10 list. Password policies must be applied, CAPTCHAs must be placed on all forms, and an admin audit trail log must be kept to identify and trace suspicious activity. Security monitoring must be provided at all times. The site must force SSL for logged in users. |  |
-|  | **Accessibility** The site must comply with WCAG 2.2 Level AA and ATAG 2.0. Logical navigation with proper semantic tags must be applied. |  |
-|  | **Integrations** The site must be architected for easy integrations with third-party services through standard REST APIs.  |  |
-|  | **Analytics** The site must be integrated with third-party analytics, at the minimum, Google Analytics. |  |
+| REQ 8 | \[\*\*List functional requirements here\] |  |
+| REQ 9 |  |  |
+| REQ 10 |  |  |
 
-### 3.2.5 CMS Requirements {#3.2.5-cms-requirements}
+### 3.2.4 Online Platform Non-Functional Requirements
+
+| Requirement Identifier | Requirement | Vendor Compliance / Comments |
+| ----- | ----- | :---: |
+| REQ 11 | **Search Engine Optimization** The site’s public content must be optimized for search engines. Search Engine Optimization must be applied to all on-site optimizations, including, but not limited to, meta tags, the site’s structure, semantic tags, an XML sitemap, the site’s verification, Open Graph tags, a friendly and readable URL structure, page titles, alt and title attributes, preventing duplicate content, and RDF. |  |
+| REQ 12 | **Compatibility** The site must be accessible and usable with current versions of commonly used browsers, including, but not limited to, IE8+, Google Chrome, Safari, Opera, and Firefox, across the most widely used operating environments.	 |  |
+| REQ 13 | **Site Performance** The site must be optimized for performance with minimal page load times. To optimize performance, caching mechanisms must be applied to logged-in and anonymous users. The site must pass Google Page Speed tests. Performance tuning must be applied both server-side and client-side. |  |
+| REQ 14 | **Security** The site must be tuned for strict security measures, including all prevention mechanisms for OWASP Top 10 list. Password policies must be applied, CAPTCHAs must be placed on all forms, and an admin audit trail log must be kept to identify and trace suspicious activity. Security monitoring must be provided at all times. The site must force SSL for logged in users. |  |
+| REQ 15 | **Accessibility** The site must comply with WCAG 2.2 Level AA and ATAG 2.0. Logical navigation with proper semantic tags must be applied. |  |
+| REQ 16 | **Integrations** The site must be architected for easy integrations with third-party services through standard REST APIs.  |  |
+| REQ 17 | **Analytics** The site must be integrated with third-party analytics, at the minimum, Google Analytics. |  |
+
+### 3.2.5 CMS Requirements 
 
 | Requirement Identifier | Requirement | Vendor Compliance / Comments |
 | ----- | ----- | :---: |
 | **AUTHORING & CONTENT ADMINISTRATION** |  |  |
-|  | Support for content editing including in-line (WYSIWYG editing), Microsoft Word cut-and-paste, and support for rich text. |  |
-|  | Automatic and preconfigured revision control on all content types |  |
-|  | Compare revisions and changes side by side and revert content to previous revisions.	 |  |
-|  | Keep content as unpublished or published. |  |
-|  | The system should have an archive utility to search for published/unpublished content and filter by type, author, date, category …etc. The system should allow for bulk operations on the content. Ability to search any content post stored in the CMS through simple and advanced search. |  |
-|  | The system WYSIWYG editor should have spell checking for all languages in use. |  |
+| REQ 18 | Support for content editing including in-line (WYSIWYG editing), Microsoft Word cut-and-paste, and support for rich text. |  |
+| REQ 19 | Automatic and preconfigured revision control on all content types |  |
+| REQ 20 | Compare revisions and changes side by side and revert content to previous revisions.	 |  |
+| REQ 21 | Keep content as unpublished or published. |  |
+| REQ 22 | The system should have an archive utility to search for published/unpublished content and filter by type, author, date, category …etc. The system should allow for bulk operations on the content. Ability to search any content post stored in the CMS through simple and advanced search. |  |
+| REQ 23 | The system WYSIWYG editor should have spell checking for all languages in use. |  |
 | **MEDIA & FILES MANAGEMENT** |  |  |
-|  | The ability to insert images in different sizes, with auto resizing of images to achieve design consistency and performance optimization. Ability to specify sizes dynamically for future expandability. |  |
-|  | Provide a media library to reuse media (Images, Videos, Audio, Documents) and any media component. |  |
-|  | Embed media components in WYSIWYG or any page as a block. |  |
-|  | Ability to embed and insert maps, or videos from any external location. |  |
-|  | New image styles are applied for mobile and smaller devices |  |
-|  | Ability to upload files that are downloadable/viewable by logged-in users only |  |
+| REQ 24 | The ability to insert images in different sizes, with auto resizing of images to achieve design consistency and performance optimization. Ability to specify sizes dynamically for future expandability. |  |
+| REQ 25 | Provide a media library to reuse media (Images, Videos, Audio, Documents) and any media component. |  |
+| REQ 26 | Embed media components in WYSIWYG or any page as a block. |  |
+| REQ 27 | Ability to embed and insert maps, or videos from any external location. |  |
+| REQ 28 | New image styles are applied for mobile and smaller devices |  |
+| REQ 29 | Ability to upload files that are downloadable/viewable by logged-in users only |  |
 | **MULTILINGUAL / LOCALIZATION** |  |  |
-|  | The system must support adding languages and specifying configuration options per language. Example (date formats, currencies, weekdays) |  |
-|  | The system must provide a translation interface to allow site’s admins to translate new text sentences and messages. |  |
-|  | The system must provide a content translation mechanism to link content translations and synchronize non-translatable data in translated content pairs. |  |
+| REQ 30 | The system must support adding languages and specifying configuration options per language. Example (date formats, currencies, weekdays) |  |
+| REQ 31 | The system must provide a translation interface to allow site’s admins to translate new text sentences and messages. |  |
+| REQ 32 | The system must provide a content translation mechanism to link content translations and synchronize non-translatable data in translated content pairs. |  |
 | **SEARCH ENGINE** |  |  |
-|  | CMS should provide a powerful search engine that indexes sites content and allows visitors to search by keyword. |  |
-|  | The search engine should provide a filtering mechanism and sorting by relevancy, date, or other options.	 |  |
+| REQ 33 | CMS should provide a powerful search engine that indexes sites content and allows visitors to search by keyword. |  |
+| REQ 34 | The search engine should provide a filtering mechanism and sorting by relevancy, date, or other options.	 |  |
 | **SYNDICATION** |  |  |
-|  | The website must provide news feeds via RSS standard feeds. Multiple feeds will be needed for different types of content.	 |  |
+| REQ 35 | The website must provide news feeds via RSS standard feeds. Multiple feeds will be needed for different types of content.	 |  |
 | **DELIVERY** |  |  |
-|  | A mechanism for managing featured content and the display order on the homepage and other landing pages via a “Content Queue.”	 |  |
-|  | Change the layout of a page from within predefined templates. |  |
-|  | Drag-and-drop page components to reorder or structure the page |  |
-|  | Re-use components or blocks across all pages  |  |
-|  | Create and re-use custom HTML widgets |  |
-|  | The system should provide a mechanism to detect, find, and repair broken links. |  |
+| REQ 36 | A mechanism for managing featured content and the display order on the homepage and other landing pages via a “Content Queue.”	 |  |
+| REQ 37 | Change the layout of a page from within predefined templates. |  |
+| REQ 38 | Drag-and-drop page components to reorder or structure the page |  |
+| REQ 39 | Re-use components or blocks across all pages  |  |
+| REQ 40 | Create and re-use custom HTML widgets |  |
+| REQ 41 | The system should provide a mechanism to detect, find, and repair broken links. |  |
 | **SOCIAL** |  |  |
-|  | The CMS must integrate with popular social networks for sharing content. Each content item should be able to be with relevant information (image, title description) on social media networks such as (Facebook, Twitter, LinkedIn, etc.) |  |
-|  | The system must provide sharing stats through integration with analytics tools. |  |
+| REQ 42 | The CMS must integrate with popular social networks for sharing content. Each content item should be able to be with relevant information (image, title description) on social media networks such as (Facebook, Twitter, LinkedIn, etc.) |  |
+| REQ 43 | The system must provide sharing stats through integration with analytics tools. |  |
 | **SCALABILITY** |  |  |
-|  | The system must be developed and architected using a scalable approach. The platform will be expanded with numerous functional features and new services in the future.	 |  |
+| REQ 44 | The system must be developed and architected using a scalable approach. The platform will be expanded with numerous functional features and new services in the future.	 |  |
 
-### 3.2.6 Hosting Requirements {#3.2.6-hosting-requirements}
-
-| Requirement Identifier | Requirement | Vendor Compliance / Comments |
-| ----- | ----- | :---: |
-|  | Provide all necessary services for hosting the new website on a cloud hosting platform. Hosting must be optimized for fast performance and navigation. |  |
-|  | Hosting must provide a staging site (for testing before making any change on production) |  |
-|  | Service Level Agreement with stated availability of at least 99.95%. |  |
-|  | Daily or weekly backups to ensure full system recovery. |  |
-|  | Full system recovery when necessary or as and when requested by \[\*\*ORGANIZATION NAME\] without unnecessary delay. |  |
-|  | Guaranteed retrieval of content by \[\*\*ORGANIZATION NAME\] at no extra cost after the expiry of the hosting term. |  |
-|  | The site must be hosted using SSL for logged-in users. |  |
-
-### 3.2.7 Maintenance and Support Requirements {#3.2.7-maintenance-and-support-requirements}
+### 3.2.6 Hosting Requirements 
 
 | Requirement Identifier | Requirement | Vendor Compliance / Comments |
 | ----- | ----- | :---: |
-|  | The maintenance term shall be 12 months starting from the date of launching the new site. |  |
-|  | The vendor must provide an online ticket management system that is accessible online. The vendor must provide phone support access during working hours. |  |
-|  | Install security updates, provide bug fixes and CMS upgrades, and ensure the new website's compatibility with new browser versions. |  |
-|  | Provide Service Level Agreement (SLA) for response times with a maximum of 1 hour for critical issues. |  |
-|  | Provide 24/7/365 proactive monitoring services for site performance, server health, and hosting health. Monitoring services must alert in case of any event/incident and shall be treated according to the SLA provided.	 |  |
-|  | Logs Retention: All logs (access, error, warning, etc.) must be kept for up to 90 days through log retention systems.	 |  |
+| REQ 45 | Provide all necessary services for hosting the new website on a cloud hosting platform. Hosting must be optimized for fast performance and navigation. |  |
+| REQ 46 | Hosting must provide a staging site (for testing before making any change on production) |  |
+| REQ 47 | Service Level Agreement with stated availability of at least 99.95%. |  |
+| REQ 48 | Daily or weekly backups to ensure full system recovery. |  |
+| REQ 49 | Full system recovery when necessary or as and when requested by \[\*\*ORGANIZATION NAME\] without unnecessary delay. |  |
+| REQ 50 | Guaranteed retrieval of content by \[\*\*ORGANIZATION NAME\] at no extra cost after the expiry of the hosting term. |  |
+| REQ 51 | The site must be hosted using SSL for logged-in users. |  |
 
-### 3.2.8 Training and Documentation Requirements {#3.2.8-training-and-documentation-requirements}
+### 3.2.7 Maintenance and Support Requirements 
 
 | Requirement Identifier | Requirement | Vendor Compliance / Comments |
 | ----- | ----- | :---: |
-|  | The vendor must provide user training prior to launch to a selected group of non-technical users who will administer the online platform and CMS as part of a “train-the-trainer approach”.  Such training should aim to allow those users to administer the system with minimal involvement from the vendor.	 |  |
-|  | The vendor must provide a training plan with user manuals for administrators to administer the online platform and CMS. Training manuals must be in English and cover all aspects of managing the site. |  |
-|  | After training, the vendor must provide support as needed through the Maintenance and Support SLA.	 |  |
+| REQ 52 | The maintenance term shall be 12 months starting from the date of launching the new site. |  |
+| REQ 53 | The vendor must provide an online ticket management system that is accessible online. The vendor must provide phone support access during working hours. |  |
+| REQ 54 | Install security updates, provide bug fixes and CMS upgrades, and ensure the new website's compatibility with new browser versions. |  |
+| REQ 55 | Provide Service Level Agreement (SLA) for response times with a maximum of 1 hour for critical issues. |  |
+| REQ 56 | Provide 24/7/365 proactive monitoring services for site performance, server health, and hosting health. Monitoring services must alert in case of any event/incident and shall be treated according to the SLA provided.	 |  |
+| REQ 57 | Logs Retention: All logs (access, error, warning, etc.) must be kept for up to 90 days through log retention systems.	 |  |
 
-## 3.3 Deliverables and Timeline {#3.3-deliverables-and-timeline}
+### 3.2.8 Training and Documentation Requirements 
 
+| Requirement Identifier | Requirement | Vendor Compliance / Comments |
+| ----- | ----- | :---: |
+| REQ 58 | The vendor must provide user training prior to launch to a selected group of non-technical users who will administer the online platform and CMS as part of a “train-the-trainer approach”.  Such training should aim to allow those users to administer the system with minimal involvement from the vendor.	 |  |
+| REQ 59 | The vendor must provide a training plan with user manuals for administrators to administer the online platform and CMS. Training manuals must be in English and cover all aspects of managing the site. |  |
+| REQ 60 | After training, the vendor must provide support as needed through the Maintenance and Support SLA.	 |  |
+
+## 3.3 Deliverables and Timeline 
 The vendor shall carry out the complete delivery and launch of the online platform and services within \[\*\*maximum of xxx months\].
 
 Maintenance, support, and hosting services will commence upon the launch and complete acceptance of the online platform.
 
-## 3.4 Logistics and Acceptance {#3.4-logistics-and-acceptance}
+## 3.4 Logistics and Acceptance 
 
 1. Input by \[\*\*ORGANIZATION NAME\]
 
@@ -503,9 +507,9 @@ Maintenance, support, and hosting services will commence upon the launch and com
 
    4. All other work may be performed off-site. 
 
-# 4\. Project Management and Methodology {#4.-project-management-and-methodology}
+# 4\. Project Management and Methodology
 
-## 4.1 Project Management {#4.1-project-management}
+## 4.1 Project Management
 
 The vendor must provide a detailed project plan to respond to this RFP. The plan must be comprehensive enough in scope and detail to convey the vendor’s ability to manage and measure this project as specified in this RFP.
 
@@ -521,27 +525,27 @@ As part of the overall project, the vendor shall establish a project control off
 
 * Setup and provide online centralized space for project communication, collaboration, artifacts, resources, and reporting
 
-## 4.2 Reporting {#4.2-reporting}
+## 4.2 Reporting 
 
 * Unless otherwise agreed, the vendor shall submit weekly reports to demonstrate progress and to flag potential issues and risks. 
 
-## 4.3 Methodology {#4.3-methodology}
+## 4.3 Methodology
 
 * The vendor shall apply Agile software development principles and provide \[\*\*ORGANIZATION NAME\] access to the project repository to review progress and provide contributions.
 
 * Milestone-related deliverables are part of the milestone acceptance and will be delivered by the vendor using appropriate and agreed-upon media.
 
-## 4.4 Acceptance {#4.4-acceptance}
+## 4.4 Acceptance 
 
 * \[\*\*ORGANIZATION NAME\] will accept these deliverables as complying with the contract if they were produced in accordance with best industry practice, in accordance with the provisions of this contract, and in accordance with the instructions received from the authorized representative of \[\*\*ORGANIZATION NAME\]. 
 
 * Vendors must specify a deliverables review and acceptance procedure in their proposals.
 
-# 5\. Requirements for vendor and personnel {#5.-requirements-for-vendor-and-personnel}
+# 5\. Requirements for vendor and personnel 
 
 * The vendor shall provide case studies and illustrate similar experiences in similar projects, as laid out in Section 7 of the Instructions for Vendor Proposal Preparation and Submission.
 
-## 5.1 Vendor requirements {#5.1-vendor-requirements}
+## 5.1 Vendor requirements
 
 The vendor must
 
@@ -553,7 +557,7 @@ The vendor must
 
 * have certified technical team with official accreditation of used CMS technology.
 
-## 5.2 Vendor personnel requirements {#5.2-vendor-personnel-requirements}
+## 5.2 Vendor personnel requirements 
 
 The key staff of the vendor shall meet or exceed the following requirements:
 
