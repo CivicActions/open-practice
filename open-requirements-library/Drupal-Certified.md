@@ -3,7 +3,7 @@
 * Open Source CMS RFP & Procurement Guide
 * RFP Vendor Instructions: A step-by-step guide on how to best approach vendors
 
-Based on the [Drupal Association's](https://www.drupal.org/association/) [How to Write an RFP for Open Source Solutions: Featuring Drupal Certified Partners](https://www.drupal.org/association/blog/how-to-write-an-rfp-for-open-source-solutions-featuring-drupal-certified-partners)
+Based on the [Open Strategy Partners](https://openstrategypartners.com/) / [Vardot](https://www.vardot.com/en-us/ideas/blog/master-art-writing-rfp-open-source) / [Drupal Association's](https://www.drupal.org/association/) [How to Write an RFP for Open Source Solutions: Featuring Drupal Certified Partners](https://www.drupal.org/association/blog/how-to-write-an-rfp-for-open-source-solutions-featuring-drupal-certified-partners)
 
 
 ___
@@ -18,7 +18,7 @@ The Drupal Association is the non-profit organization behind the open source Dru
 
 ## License
 
-This document is licensed under the Creative Commons Zero license. No rights are reserved. Edit and distribute this document to your own needs.
+This document is licensed under a Creative Commons Zero license (public domain). No rights are reserved. Edit and distribute this document to your own needs.
 
  [https://creativecommons.org/publicdomain/zero/1.0/](https://creativecommons.org/publicdomain/zero/1.0/)
 
@@ -53,6 +53,8 @@ In it, you will find a solid foundation for planning your technical project RFP 
 * **“You”** in the instructions refers to vendors who want to bid to be your vendor. 
 
 * **Logo:** Replace the “your logo here” images with your logo.
+
+___
 
 # Instructions for Vendor Proposal Preparation and Submission
 
@@ -197,7 +199,7 @@ Your proposal should address the full scope of services detailed in the "Terms o
 
          3. **20% of Drupal engineers (minimum) have Acquia Certified Drupal Developer or similar certification.**
 
-      6. **Ecosystem experience:** Recent experience maintaining websites hosted on a Drupal focused hosting  solution.
+      6. **Ecosystem experience:** Recent experience maintaining websites hosted on a Drupal focused hosting solution.
 
    4. #### Financial Proposal
 
@@ -406,12 +408,14 @@ For Vendor response, please fill out:
 | Requirement Identifier | Requirement | Vendor Compliance / Comments |
 | ----- | ----- | :---: |
 | REQ 11 | **Search Engine Optimization** The site’s public content must be optimized for search engines. Search Engine Optimization must be applied to all on-site optimizations, including, but not limited to, meta tags, the site’s structure, semantic tags, an XML sitemap, the site’s verification, Open Graph tags, a friendly and readable URL structure, page titles, alt and title attributes, preventing duplicate content, and RDF. |  |
-| REQ 12 | **Compatibility** The site must be accessible and usable with current versions of commonly used browsers, including, but not limited to, IE8+, Google Chrome, Safari, Opera, and Firefox, across the most widely used operating environments.	 |  |
+| REQ 12 | **Compatibility** The site must be accessible and usable with current versions of commonly used browsers Google Chrome, Safari, and Firefox on Windows, MacOS, Android and iOS operating systems.	 |  |
 | REQ 13 | **Site Performance** The site must be optimized for performance with minimal page load times. To optimize performance, caching mechanisms must be applied to logged-in and anonymous users. The site must pass Google Page Speed tests. Performance tuning must be applied both server-side and client-side. |  |
 | REQ 14 | **Security** The site must be tuned for strict security measures, including all prevention mechanisms for OWASP Top 10 list. Password policies must be applied, CAPTCHAs must be placed on all forms, and an admin audit trail log must be kept to identify and trace suspicious activity. Security monitoring must be provided at all times. The site must force SSL for logged in users. |  |
-| REQ 15 | **Accessibility** The site must comply with WCAG 2.2 Level AA and ATAG 2.0. Logical navigation with proper semantic tags must be applied. |  |
+| REQ 15 | **Accessibility** The site must comply with the latest W3C WAI recommended release of  WCAG to  Level AA.  The editing environment should be built to support ATAG 2.0, in that it is both as accessible as the public pages, and supports authors in creating accessible content. <br>
+Your response must describe how you test with a combination of automated and manual approaches. Please let us know if people with disabilities will be providing manual testing of your work. 
+ |  |
 | REQ 16 | **Integrations** The site must be architected for easy integrations with third-party services through standard REST APIs.  |  |
-| REQ 17 | **Analytics** The site must be integrated with third-party analytics, at the minimum, Google Analytics. |  |
+| REQ 17 | **Analytics** The site must be integrated with third-party analytics, Google Analytics is acceptable, but a more performant and privacy respecting tool like Matomo or Plausible would be preferable. |  |
 
 ### 3.2.5 CMS Requirements 
 
@@ -463,26 +467,28 @@ For Vendor response, please fill out:
 | REQ 48 | Daily or weekly backups to ensure full system recovery. |  |
 | REQ 49 | Full system recovery when necessary or as and when requested by \[\*\*ORGANIZATION NAME\] without unnecessary delay. |  |
 | REQ 50 | Guaranteed retrieval of content by \[\*\*ORGANIZATION NAME\] at no extra cost after the expiry of the hosting term. |  |
-| REQ 51 | The site must be hosted using SSL for logged-in users. |  |
+| REQ 51 | The site must be hosted using SSL. |  |
+| REQ 52 | Site must be powered with renewable energy.  |  |
+
 
 ### 3.2.7 Maintenance and Support Requirements 
 
 | Requirement Identifier | Requirement | Vendor Compliance / Comments |
 | ----- | ----- | :---: |
-| REQ 52 | The maintenance term shall be 12 months starting from the date of launching the new site. |  |
-| REQ 53 | The vendor must provide an online ticket management system that is accessible online. The vendor must provide phone support access during working hours. |  |
-| REQ 54 | Install security updates, provide bug fixes and CMS upgrades, and ensure the new website's compatibility with new browser versions. |  |
-| REQ 55 | Provide Service Level Agreement (SLA) for response times with a maximum of 1 hour for critical issues. |  |
-| REQ 56 | Provide 24/7/365 proactive monitoring services for site performance, server health, and hosting health. Monitoring services must alert in case of any event/incident and shall be treated according to the SLA provided.	 |  |
-| REQ 57 | Logs Retention: All logs (access, error, warning, etc.) must be kept for up to 90 days through log retention systems.	 |  |
+| REQ 53 | The maintenance term shall be 12 months starting from the date of launching the new site. |  |
+| REQ 54 | The vendor must provide an online ticket management system that is accessible online. The vendor must provide phone support access during working hours. |  |
+| REQ 55 | Install security updates, provide bug fixes and CMS upgrades, and ensure the new website's compatibility with new browser versions. |  |
+| REQ 56 | Provide Service Level Agreement (SLA) for response times, with a maximum of 1 hour for critical issues. |  |
+| REQ 57 | Provide 24/7/365 proactive monitoring services for site performance, server health, and hosting health. Monitoring services must alert in case of any event/incident and shall be treated according to the SLA provided.	 |  |
+| REQ 58 | Logs Retention: All logs (access, error, warning, etc.) must be kept for up to 90 days through log retention systems.	 |  |
 
 ### 3.2.8 Training and Documentation Requirements 
 
 | Requirement Identifier | Requirement | Vendor Compliance / Comments |
 | ----- | ----- | :---: |
-| REQ 58 | The vendor must provide user training prior to launch to a selected group of non-technical users who will administer the online platform and CMS as part of a “train-the-trainer approach”.  Such training should aim to allow those users to administer the system with minimal involvement from the vendor.	 |  |
-| REQ 59 | The vendor must provide a training plan with user manuals for administrators to administer the online platform and CMS. Training manuals must be in English and cover all aspects of managing the site. |  |
-| REQ 60 | After training, the vendor must provide support as needed through the Maintenance and Support SLA.	 |  |
+| REQ 59 | The vendor must provide user training prior to launch to a selected group of non-technical users who will administer the online platform and CMS as part of a “train-the-trainer approach”.  Such training should aim to allow those users to administer the system with minimal involvement from the vendor.	 |  |
+| REQ 60 | The vendor must provide a training plan with user manuals for administrators to administer the online platform and CMS. Training manuals must be in English and cover all aspects of managing the site. |  |
+| REQ 61 | After training, the vendor must provide support as needed through the Maintenance and Support SLA.	 |  |
 
 ## 3.3 Deliverables and Timeline 
 The vendor shall carry out the complete delivery and launch of the online platform and services within \[\*\*maximum of xxx months\].
@@ -535,7 +541,7 @@ As part of the overall project, the vendor shall establish a project control off
 
 ## 4.4 Acceptance 
 
-* \[\*\*ORGANIZATION NAME\] will accept these deliverables as complying with the contract if they were produced in accordance with best industry practice, in accordance with the provisions of this contract, and in accordance with the instructions received from the authorized representative of \[\*\*ORGANIZATION NAME\]. 
+* \[\*\*ORGANIZATION NAME\] will accept these deliverables as complying with the contract if they were produced in accordance with the best industry practice, in accordance with the provisions of this contract, and in accordance with the instructions received from the authorized representative of \[\*\*ORGANIZATION NAME\]. 
 
 * Vendors must specify a deliverables review and acceptance procedure in their proposals.
 
