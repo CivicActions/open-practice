@@ -251,9 +251,7 @@ Your proposal should address the full scope of services detailed in the "Terms o
 
        **You may not duplicate, use, or disclose them—in whole or in part—for any purpose other than to evaluate them and respond to \[\*\*ORGANIZATION NAME\] ’s request for proposal or otherwise without prior written agreement of \[\*\*ORGANIZATION NAME\].**
 
-# 
-
-# ![your-logo-here-aalesund][image1]
+---
 
 # TERMS OF REFERENCE (ANNEX A) 
 
