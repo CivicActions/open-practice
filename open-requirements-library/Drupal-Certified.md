@@ -411,8 +411,7 @@ For Vendor response, please fill out:
 | REQ 12 | **Compatibility** The site must be accessible and usable with current versions of commonly used browsers Google Chrome, Safari, and Firefox on Windows, MacOS, Android and iOS operating systems.	 |  |
 | REQ 13 | **Site Performance** The site must be optimized for performance with minimal page load times. To optimize performance, caching mechanisms must be applied to logged-in and anonymous users. The site must pass Google Page Speed tests. Performance tuning must be applied both server-side and client-side. |  |
 | REQ 14 | **Security** The site must be tuned for strict security measures, including all prevention mechanisms for OWASP Top 10 list. Password policies must be applied, CAPTCHAs must be placed on all forms, and an admin audit trail log must be kept to identify and trace suspicious activity. Security monitoring must be provided at all times. The site must force SSL for logged in users. |  |
-| REQ 15 | **Accessibility** The site must comply with the latest W3C WAI recommended release of  WCAG to  Level AA.  The editing environment should be built to support ATAG 2.0, in that it is both as accessible as the public pages, and supports authors in creating accessible content. <br>
-Your response must describe how you test with a combination of automated and manual approaches. Please let us know if people with disabilities will be providing manual testing of your work. 
+| REQ 15 | **Accessibility** The site must comply with the latest W3C WAI recommended release of  WCAG to  Level AA.  The editing environment should be built to support ATAG 2.0, in that it is both as accessible as the public pages, and supports authors in creating accessible content. <br>Your response must describe how you test with a combination of automated and manual approaches. Please let us know if people with disabilities will be providing manual testing of your work. 
  |  |
 | REQ 16 | **Integrations** The site must be architected for easy integrations with third-party services through standard REST APIs.  |  |
 | REQ 17 | **Analytics** The site must be integrated with third-party analytics, Google Analytics is acceptable, but a more performant and privacy respecting tool like Matomo or Plausible would be preferable. |  |
@@ -468,7 +467,7 @@ Your response must describe how you test with a combination of automated and man
 | REQ 49 | Full system recovery when necessary or as and when requested by \[\*\*ORGANIZATION NAME\] without unnecessary delay. |  |
 | REQ 50 | Guaranteed retrieval of content by \[\*\*ORGANIZATION NAME\] at no extra cost after the expiry of the hosting term. |  |
 | REQ 51 | The site must be hosted using SSL. |  |
-| REQ 52 | Site must be powered with renewable energy.  |  |
+| REQ 52 | Website servers must be powered with renewable energy. Ideally from locally sourced 24/7 Carbon Free energy sources.  |  |
 
 
 ### 3.2.7 Maintenance and Support Requirements 
