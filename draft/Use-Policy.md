@@ -11,7 +11,8 @@ This is a draft policy outlines when work should go into the CivicActions corpor
 - The project aligns with **client delivery, internal tooling, or CivicActions strategy**.  
 - The code is itended to be **reused, extended, or depended on** by others in the company.  
 - The work touches on **governance, compliance, or accessibility** standards where CivicActions must show accountability.  
-- Documentation, issue tracking, or contribution from other staff will be needed.  
+- Documentation, issue tracking, or contribution from other staff will be needed.
+- Build to align with our Check My Repo https://github.com/CivicActions/check-my-repo
 - Security, licensing, and support responsibilities fall to CivicActions.  
 
 ### Personal or Private Repositories (use when…)
