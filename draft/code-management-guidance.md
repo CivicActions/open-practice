@@ -80,3 +80,67 @@ flowchart TD
     E -->|No| D
 
     B --> F[Add docs & follow CivicActions governance]
+
+
+```mermaid
+flowchart TD
+    A[Do you expect others at CivicActions to use or depend on this work?] -->|Yes| B[Put it in the Corporate GitHub Repo]
+    A -->|No| C[Is this just personal learning or an experiment?]
+
+    C -->|Yes| D[Keep it in a Personal Repo<br/>Add note: 'This work was initiated with support from CivicActions.']
+    C -->|No| E[Does it align with client delivery or CivicActions strategy?]
+
+    E -->|Yes| F[Is it suitable for public sharing?]
+    F -->|Yes| B
+    F -->|No| G[Put it in the Corporate GitLab Repo]
+
+    E -->|No| H[Is it client work?]
+    H -->|Yes| I[Does the client have a repository?]
+    I -->|Yes| J[Use the client's repository]
+    I -->|No| K[Obtain client approval to use CivicActions GitHub or GitLab]
+
+    H -->|No| D
+
+    B --> L[Add docs & follow CivicActions governance]
+    G --> L
+    J --> L
+    K --> L
+
+```mermaid
+flowchart TD
+    A[Is this work associated with a contract and a deliverable?] -->|Yes| B[Is this work for CivicActions?]
+    A -->|No| D[Keep it in a Personal Repo<br/>Add note: 'This work was initiated with support from CivicActions.']
+
+    B -->|Yes| C[Is this a team project?]
+    B -->|No| E[Put it in the Personal GitHub Repo]
+
+    C -->|Yes| F[Put it in the Corporate GitHub Repo]
+    C -->|No| E
+
+    F --> G[Add docs & follow CivicActions governance]
+
+
+
+```mermaid
+flowchart TD
+    A[Is this work associated with a contract and a deliverable?] -->|Yes| B[Is this work for CivicActions?]
+    A -->|No| D[Keep it in a Personal Repo<br/>Add note: 'This work was initiated with support from CivicActions.']
+
+    B -->|Yes| C[Is this a team project?]
+    B -->|No| E[Put it in the Personal GitHub Repo]
+
+    C -->|Yes| F[Put it in the Corporate GitHub Repo]
+    C -->|No| E
+
+    F --> G[Add docs & follow CivicActions governance]
+
+    B -->|No| H[Is it client work?]
+    H -->|Yes| I[Does the client have a repository?]
+    I -->|Yes| J[Use the client's repository]
+    I -->|No| K[Obtain client approval to use CivicActions GitHub or GitLab]
+
+    H -->|No| D
+
+    J --> L[Add docs & follow CivicActions governance]
+    K --> L
+
