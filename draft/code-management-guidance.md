@@ -68,11 +68,6 @@ When staff experiment during CivicActions-paid time, they should acknowledge Civ
 
 ## 4. Decision Tree
 
-Certainly! Here’s a single Markdown file that includes all the Mermaid charts formatted correctly to work together. You can copy and paste this entire block into your Markdown environment that supports Mermaid syntax.
-
-```markdown
-# CivicActions DRAFT Code Management Guidelines
-
 This is a DRAFT guidance outlines when work should go into the CivicActions corporate repositories (GitHub & GitLab), our client repositories, or a personal repository. The guidance should direct the team how to attribute CivicActions or client support behind the repositories. This is particularly important when experimenting with code on paid time. All projects should have an appropriate license. CivicActions default license should be the [AGPL v3](https://opensource.org/license/agpl-v3), but other [OSI-approved licenses](https://opensource.org/licenses) can also be appropriate. 
 
 ---
