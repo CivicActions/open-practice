@@ -157,4 +157,29 @@ flowchart TD
     K --> L
 ```
 
-This Markdown file includes all four decision trees, and they should render correctly in a Markdown environment that supports Mermaid. Let me know if you need any further assistance!
+
+## Decision Tree 5
+
+```mermaid
+flowchart TD
+    A[You want to publish something you did at CivicActions] -->|Yes| B[Is it for a client?]
+    A -->|No| D[Is it an experi]
+
+    B -->|Yes| C[Is this a team project?]
+    B -->|No| E[Put it in the Personal GitHub Repo]
+
+    C -->|Yes| F[Put it in the Corporate GitHub Repo]
+    C -->|No| E
+
+    F --> G[Add docs & follow CivicActions governance]
+
+    B -->|No| H[Is it client work?]
+    H -->|Yes| I[Does the client have a repository?]
+    I -->|Yes| J[Use the client's repository]
+    I -->|No| K[Obtain client approval to use CivicActions GitHub or GitLab]
+
+    H -->|No| D
+
+    J --> L[Add docs & follow CivicActions governance]
+    K --> L
+```
