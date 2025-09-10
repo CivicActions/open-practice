@@ -163,6 +163,7 @@ flowchart TD
 
 https://www.mermaidchart.com/app/projects/0d29f810-93fc-41dd-a9bf-f11e05365a4f/diagrams/61285e29-16c4-4575-9b8f-303737b05654/version/v0.1/edit
 
+```mermaid
 flowchart TD
     Project[You want to publish something you did at CivicActions] -->|Yes| Client[Is it for a client?]
 
@@ -189,4 +190,5 @@ flowchart TD
 
     J --> L[Add docs & follow CivicActions governance]
     K --> L
+```
 
