@@ -160,26 +160,33 @@ flowchart TD
 
 ## Decision Tree 5
 
-```mermaid
+
+https://www.mermaidchart.com/app/projects/0d29f810-93fc-41dd-a9bf-f11e05365a4f/diagrams/61285e29-16c4-4575-9b8f-303737b05654/version/v0.1/edit
+
 flowchart TD
-    A[You want to publish something you did at CivicActions] -->|Yes| B[Is it for a client?]
-    A -->|No| D[Is it an experiment?]
+    Project[You want to publish something you did at CivicActions] -->|Yes| Client[Is it for a client?]
 
-    B -->|Yes| C[Do we have approval to make it public?]
-    B -->|No| E[Put it in the Personal GitHub Repo]
+    Client -->|Yes| Approval[Do we have approval to make it public?]
+    Client -->|No| Team[Do you want to work with it with CA team?]
 
-    C -->|Yes| F[Put it on GitHub]
-    C -->|No| E[Put it on GitLab]
+    Approval -->|No| EE[Do we want to work on it within CivicActions?]
+    Team --> |Yes| GitLab[do we want to work in private?]
+    Team --> |No| GitHubPersonal
 
-    F --> G[Add docs & follow CivicActions governance]
+    EE --> |Yes| GG[Add docs & follow CivicActions governance]
+    Approval --> HH[Add docs & follow CivicActions governance]
 
-    B -->|No| H[Is it client work?]
+    GitLab --> E[rad oub]
+    GitHubCA --> F[Put it on CA GitHub]
+    GitHubPersonal --> F[Put it on GitHub]
+
+    Approval -->|No| E[Put it on GitLab]
+
     H -->|Yes| I[Does the client have a repository?]
     I -->|Yes| J[Use the client's repository]
     I -->|No| K[Obtain client approval to use CivicActions GitHub or GitLab]
 
-    H -->|No| D
 
     J --> L[Add docs & follow CivicActions governance]
     K --> L
-```
+
