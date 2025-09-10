@@ -164,7 +164,7 @@ flowchart TD
 https://www.mermaidchart.com/app/projects/0d29f810-93fc-41dd-a9bf-f11e05365a4f/diagrams/61285e29-16c4-4575-9b8f-303737b05654/version/v0.1/edit
 
 ```mermaid
-flowchart TD
+flowchart
     Project[You want to publish something you did at CivicActions] -->|Yes| Client[Is it for a client?]
 
     Client -->|Yes| Approval[Do we have approval to make it public?]
@@ -179,7 +179,7 @@ flowchart TD
 
     GitLab --> E[rad oub]
     GitHubCA --> F[Put it on CA GitHub]
-    GitHubPersonal --> F[Put it on GitHub]
+    GitHubPersonal[Put it on Personal GitHub]
 
     Approval -->|No| E[Put it on GitLab]
 
