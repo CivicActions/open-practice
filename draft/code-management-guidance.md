@@ -72,6 +72,7 @@ This is a DRAFT guidance outlines when work should go into the CivicActions corp
 
 ```mermaid
 flowchart TD
+    %% Nodes
     Project["You want to publish something you did at CivicActions"]
     Client{"Is it for a client?"}
     ClientRepo{"Does the client have a repo?"}
@@ -85,24 +86,31 @@ flowchart TD
     Docs["Add docs and follow CivicActions governance"]
     DocsPersonal["Add an OSI license and credit CivicActions"]
 
+    %% Flow
     Project --> Client
     Client -->|Yes| ClientRepo
     Client -->|No| NeedCA
-
     ClientRepo -->|Yes| UseClientRepo
     ClientRepo -->|No| WantPublic
-
     NeedCA -->|Yes| WantPublic
     NeedCA -->|No| UsePersonalGH
-
     WantPublic -->|Yes| Approval
     WantPublic -->|No| UseCAGL
-
     Approval -->|Yes| UseCAGH
     Approval -->|No| UseCAGL
-
     UseCAGH --> Docs
-
     UsePersonalGH --> DocsPersonal
+
+    %% Preferred endpoints styling
+    classDef prefNode fill:#e8f5e9,stroke:#2e7d32,stroke-width:2px;
+    class UseClientRepo,UseCAGH prefNode;
+
+    %% Preferred edges styling (thicker + green)
+    linkStyle 1 stroke:#2e7d32,stroke-width:3px;
+    linkStyle 3 stroke:#2e7d32,stroke-width:3px;
+    linkStyle 5 stroke:#2e7d32,stroke-width:3px;
+    linkStyle 7 stroke:#2e7d32,stroke-width:3px;
+    linkStyle 9 stroke:#2e7d32,stroke-width:3px;
+
 ```
 
