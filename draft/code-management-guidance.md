@@ -73,18 +73,18 @@ This is a DRAFT guidance outlines when work should go into the CivicActions corp
 ```mermaid
 flowchart TD
     %% Nodes
-    Project["You want to publish something you did at CivicActions"]
+    Project["You want to publish something you did at CivicActions?"]
     Client{"Is it for a client?"}
     ClientRepo{"Does the client have a repo?"}
     NeedCA{"Do you have plans to work on it with the CA team?"}
     WantPublic{"Do we want to publish it publicly?"}
     Approval{"Do we have approval to make it public?"}
-    UseClientRepo["Host it in the client's repo"]
-    UseCAGH["Put it on CA GitHub (public)"]
-    UseCAGL["Put it on CA GitLab (private)"]
-    UsePersonalGH["Put it on your personal GitHub (public)"]
-    Docs["Add docs and follow CivicActions governance"]
-    DocsPersonal["Add an OSI license and credit CivicActions"]
+    UseClientRepo["Follow client policies around repo usage."]
+    UseCAGH["Put it on CA GitHub (public)."]
+    UseCAGL["Put it on CA GitLab (private)."]
+    UsePersonalGH["Put it on your personal GitHub (public)."]
+    Docs["Add docs and follow CivicActions governance."]
+    DocsPersonal["Add an OSI license and credit CivicActions."]
 
     %% Flow
     Project --> Client
