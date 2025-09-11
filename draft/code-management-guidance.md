@@ -76,7 +76,7 @@ flowchart TD
     Project["You want to publish something you did at CivicActions?"]
     Client{"Is it for a client?"}
     ClientRepo{"Does the client have a repo?"}
-    NeedCA{"Do you have plans to work on it with the CA team?"}
+    NeedCA{"Do you have plans to work on it with the CA team? Are there other advantages to hosting on a CA repo?"}
     WantPublic{"Do we want to publish it publicly?"}
     Approval{"Do we have approval to make it public?"}
     UseClientRepo["Follow client policies around repo usage."]
