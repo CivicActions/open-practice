@@ -70,125 +70,39 @@ When staff experiment during CivicActions-paid time, they should acknowledge Civ
 
 This is a DRAFT guidance outlines when work should go into the CivicActions corporate repositories (GitHub & GitLab), our client repositories, or a personal repository. The guidance should direct the team how to attribute CivicActions or client support behind the repositories. This is particularly important when experimenting with code on paid time. All projects should have an appropriate license. CivicActions default license should be the [AGPL v3](https://opensource.org/license/agpl-v3), but other [OSI-approved licenses](https://opensource.org/licenses) can also be appropriate. 
 
----
-
-## Decision Tree 1
-
 ```mermaid
 flowchart TD
-    A[Do you expect others at CivicActions to use or depend on this work?] -->|Yes| B[Put it in the Corporate GitHub Repo]
-    A -->|No| C[Is this just personal learning or an experiment?]
+    Project["You want to publish something you did at CivicActions"]
+    Client{"Is it for a client?"}
+    ClientRepo{"Does the client have a repo?"}
+    NeedCA{"Do you have plans to work on it with the CA team?"}
+    WantPublic{"Do we want to publish it publicly?"}
+    Approval{"Do we have approval to make it public?"}
+    UseClientRepo["Host it in the client's repo"]
+    UseCAGH["Put it on CA GitHub (public)"]
+    UseCAGL["Put it on CA GitLab (private)"]
+    UsePersonalGH["Put it on your personal GitHub (public)"]
+    Docs["Add docs and follow CivicActions governance"]
+    DocsPersonal["Add an OSI license and credit CivicActions"]
 
-    C -->|Yes| D[Keep it in a Personal Repo<br/>Add note: 'Supported in part by CivicActions']
-    C -->|No| E[Does it align with client delivery or CivicActions strategy?]
+    Project --> Client
+    Client -->|Yes| ClientRepo
+    Client -->|No| NeedCA
 
-    E -->|Yes| B
-    E -->|No| D
+    ClientRepo -->|Yes| UseClientRepo
+    ClientRepo -->|No| WantPublic
 
-    B --> F[Add docs & follow CivicActions governance]
-```
+    NeedCA -->|Yes| WantPublic
+    NeedCA -->|No| UsePersonalGH
 
-## Decision Tree 2
+    WantPublic -->|Yes| Approval
+    WantPublic -->|No| UseCAGL
 
-```mermaid
-flowchart TD
-    A[Do you expect others at CivicActions to use or depend on this work?] -->|Yes| B[Put it in the Corporate GitHub Repo]
-    A -->|No| C[Is this just personal learning or an experiment?]
+    Approval -->|Yes| UseCAGH
+    Approval -->|No| UseCAGL
 
-    C -->|Yes| D[Keep it in a Personal Repo<br/>Add note: 'This work was initiated with support from CivicActions.']
-    C -->|No| E[Does it align with client delivery or CivicActions strategy?]
+    UseCAGH --> Docs
 
-    E -->|Yes| F[Is it suitable for public sharing?]
-    F -->|Yes| B
-    F -->|No| G[Put it in the Corporate GitLab Repo]
-
-    E -->|No| H[Is it client work?]
-    H -->|Yes| I[Does the client have a repository?]
-    I -->|Yes| J[Use the client's repository]
-    I -->|No| K[Obtain client approval to use CivicActions GitHub or GitLab]
-
-    H -->|No| D
-
-    B --> L[Add docs & follow CivicActions governance]
-    G --> L
-    J --> L
-    K --> L
-```
-
-## Decision Tree 3
-
-```mermaid
-flowchart TD
-    A[Is this work associated with a contract and a deliverable?] -->|Yes| B[Is this work for CivicActions?]
-    A -->|No| D[Keep it in a Personal Repo<br/>Add note: 'This work was initiated with support from CivicActions.']
-
-    B -->|Yes| C[Is this a team project?]
-    B -->|No| E[Put it in the Personal GitHub Repo]
-
-    C -->|Yes| F[Put it in the Corporate GitHub Repo]
-    C -->|No| E
-
-    F --> G[Add docs & follow CivicActions governance]
-```
-
-## Decision Tree 4
-
-```mermaid
-flowchart TD
-    A[Is this work associated with a contract and a deliverable?] -->|Yes| B[Is this work for CivicActions?]
-    A -->|No| D[Keep it in a Personal Repo<br/>Add note: 'This work was initiated with support from CivicActions.']
-
-    B -->|Yes| C[Is this a team project?]
-    B -->|No| E[Put it in the Personal GitHub Repo]
-
-    C -->|Yes| F[Put it in the Corporate GitHub Repo]
-    C -->|No| E
-
-    F --> G[Add docs & follow CivicActions governance]
-
-    B -->|No| H[Is it client work?]
-    H -->|Yes| I[Does the client have a repository?]
-    I -->|Yes| J[Use the client's repository]
-    I -->|No| K[Obtain client approval to use CivicActions GitHub or GitLab]
-
-    H -->|No| D
-
-    J --> L[Add docs & follow CivicActions governance]
-    K --> L
-```
-
-
-## Decision Tree 5
-
-
-https://www.mermaidchart.com/app/projects/0d29f810-93fc-41dd-a9bf-f11e05365a4f/diagrams/61285e29-16c4-4575-9b8f-303737b05654/version/v0.1/edit
-
-```mermaid
-flowchart
-    Project[You want to publish something you did at CivicActions] -->|Yes| Client[Is it for a client?]
-
-    Client -->|Yes| Approval[Do we have approval to make it public?]
-    Client -->|No| Team[Do you want to work with it with CA team?]
-
-    Approval -->|No| EE[Do we want to work on it within CivicActions?]
-    Team --> |Yes| GitLab[do we want to work in private?]
-    Team --> |No| GitHubPersonal
-
-    EE --> |Yes| GG[Add docs & follow CivicActions governance]
-    Approval --> HH[Add docs & follow CivicActions governance]
-
-    GitLab --> E[rad oub]
-    GitHubCA --> F[Put it on CA GitHub]
-    GitHubPersonal[Put it on Personal GitHub]
-
-    Approval -->|No| E[Put it on GitLab]
-
-    H -->|Yes| I[Does the client have a repository?]
-    I -->|Yes| J[Use the client's repository]
-    I -->|No| K[Obtain client approval to use CivicActions GitHub or GitLab]
-
-
-    J --> L[Add docs & follow CivicActions governance]
-    K --> L
+    UsePersonalGH --> DocsPersonal
 ```
 
