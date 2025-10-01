@@ -20,7 +20,7 @@ Open standards, open source, open data, open science, open government are ultima
 * [Guide to Preparing and Maintaining Impactful Past Performance for Government Contractors](https://docs.google.com/document/d/1UyJ4l1tcvMGYO2yMCCpctu1qzuSkpfNBaSAgGp-lCis) [GoogleDoc]
 * [5 Tips for Program Validation Support](https://docs.google.com/document/d/1LEqZjH2pco2gPtl1WSSiMXj0d4oD42jfd_pFiTjcAD8) [GoogleDoc]
 * [CivicActions Guidebook](https://guidebook.civicactions.com/en/latest/)
-* [CivcActions Open Python Directory](https://github.com/CivicActions/open-python-directory?)
+* [Open Python Directory](https://github.com/CivicActions/open-python-directory)
 
 
 ## Documentation
