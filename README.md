@@ -10,7 +10,7 @@ Open standards, open source, open data, open science, open government are ultima
 * [Drupal's OpenACR Process](https://www.drupal.org/docs/getting-started/accessibility/accessibility-conformance-report-acr-process)
 * [OSCAL Reusable Component Definitions Library](https://github.com/CivicActions/oscal-component-definitions)
 * [Digital.gov Site Scanning program - Google Sheet Highlights](https://github.com/CivicActions/site-evaluation-tools/blob/main/digital.gov-scan-upload.js.md)
-* [CivicActions' Partner Playbook](https://github.com/CivicActions/open-practice/blob/main/docs/README-PartnerPlaybook.md)
+* [Partner Playbook](https://github.com/CivicActions/open-practice/blob/main/docs/README-PartnerPlaybook.md)
 * [Open Source Software vs Proprietary Software](https://docs.google.com/document/d/1o3rJSa1KhfC9QcliQ9RwgZsoHPJM54XzFmRLzrA8DnQ/edit?tab=t.0) [GoogleDoc]
 * [Open Requirements Library](https://github.com/CivicActions/open-practice/tree/main/open-requirements-library#open-requirements-library)
   * [White Paper: Open Requirements](https://docs.google.com/document/d/1OYrxJp5LaZMRSFltmnwvS2BpcRwnkDY3not6ELjH2M0) [GoogleDoc]
@@ -21,7 +21,7 @@ Open standards, open source, open data, open science, open government are ultima
 * [5 Tips for Program Validation Support](https://docs.google.com/document/d/1LEqZjH2pco2gPtl1WSSiMXj0d4oD42jfd_pFiTjcAD8) [GoogleDoc]
 * [CivicActions Guidebook](https://guidebook.civicactions.com/en/latest/)
 * [CivcActions Open Python Directory](https://github.com/CivicActions/open-python-directory?)
-
+* [USDS Digital IT Acquisition Professional (DITAP) Curriculum] (https://github.com/usds/ditap-curriculum-update/blob/main/README.md) 
 
 ## Documentation
 * Licensing How To
