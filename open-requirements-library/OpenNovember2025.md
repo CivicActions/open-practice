@@ -5,4 +5,4 @@ Throughout November, individuals and teams across digital government, civic tech
 Join us in growing the Digital Commons and making openness the standard for how we work and share knowledge.
 
 Resources:
-[Download Open November Logo](images/open-nov.png)
+[Download Open November Logo](/open-practice/images/open-nov.png)
