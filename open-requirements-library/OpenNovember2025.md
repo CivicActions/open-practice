@@ -11,6 +11,6 @@ Throughout November, individuals and teams across digital government, civic tech
 Join us in growing the Digital Commons and making openness the standard for how we work and share knowledge.
 
 Resources:
-[Download Open November Logo](https://github.com/CivicActions/open-practice/raw/main/images/open-nov-1.png)
-[Download Open November Contributed Logo](https://github.com/CivicActions/open-practice/raw/main/images/open-nov-contribute.png)
-[Digital Toolkit](https://docs.google.com/document/d/1liMt3k14AevMLp2KFlIhAg9-ttEYqgN6yt5WuO6EC90/edit?tab=t.0)
+- [Download Open November Logo](https://github.com/CivicActions/open-practice/raw/main/images/open-nov-1.png)
+- [Download Open November Contributed Logo](https://github.com/CivicActions/open-practice/raw/main/images/open-nov-contribute.png)
+- [Digital Toolkit](https://docs.google.com/document/d/1liMt3k14AevMLp2KFlIhAg9-ttEYqgN6yt5WuO6EC90/edit?tab=t.0)
