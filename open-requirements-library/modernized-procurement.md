@@ -1,6 +1,6 @@
 ### _Open Requirements_
 
-# Agile Migration to Drupal
+# Modernized Procurement Workflow - Discovery Objectives
 
 _License & Copyright: The materials herein are all © 2025 CivicActions_
 
