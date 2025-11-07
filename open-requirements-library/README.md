@@ -5,7 +5,7 @@ The [Open Requirements Library](https://docs.google.com/document/d/1OYrxJp5LaZMR
 Current library files include:
 
 - [Open Source Procurement Checklist](/open-requirements-library/Open-Source-Procurement-Checklist.md) | [Markdown Version](Open-Source-Procurement-Checklist.md)
-- [Open Source Procurement FAQ](/open-practice/?file=OSS-procurement-FAQ.md)
+- [Open Source Procurement FAQ](/open-requirements-library/OSS-procurement-FAQ.md)
 - [Agile Migration to Drupal](/open-requirements-library/agile-migrations.md)
 - [Rationalizing Web Properties with AI into Drupal](/open-requirements-library/web-consolidation.md)
 - [Section 508 Compliance for Website Maintenance and Enhancement](/open-requirements-library/accessibility.md)
