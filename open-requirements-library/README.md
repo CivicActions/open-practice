@@ -9,6 +9,7 @@ Current library files include:
 - [Agile Migration to Drupal](/open-requirements-library/agile-migrations.md)
 - [Rationalizing Web Properties with AI into Drupal](/open-requirements-library/web-consolidation.md)
 - [Section 508 Compliance for Website Maintenance and Enhancement](/open-requirements-library/accessibility.md)
+- [Modernized Procurement Workflow - Discovery Objectives](/open-requirements-library/modernized-procurement.md)
 
 Related articles:
 
