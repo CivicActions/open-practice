@@ -83,7 +83,7 @@ Many legacy website migrations use a “big bang” or waterfall model—collect
 
 **In practice**, this means:
 
-1. **Deciding on a migration strategy: how to segment/slice the site for migration. **The team should identify how to segment and prioritize slice migration. For example, the team could choose to segment by department or program, or could choose to start with low-visibility portions to test the migration process and then schedule more critical portions after more is known about migration details.
+1. **Deciding on a migration strategy:** how to segment/slice the site for migration. **The team should identify how to segment and prioritize slice migration. For example, the team could choose to segment by department or program, or could choose to start with low-visibility portions to test the migration process and then schedule more critical portions after more is known about migration details.
 2. **Identifying a specific slice to start** (e.g., “jobs” section, “blog,” “press releases,” etc.).
 3. Complete _all_ relevant activities (discovery, design, build, migration, user testing, launch) **for that slice**, using web proxy or load balancer rules to route users of that section to the new Drupal site.
 4. Gather feedback, refine, address issues, and ensure stable performance.
