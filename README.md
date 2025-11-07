@@ -18,6 +18,7 @@ Open standards, open source, open data, open science, open government are ultima
   * [Agile migration to Drupal](open-requirements-library/agile-migrations.md)
   * [Rationalizing Web Properties with AI into Drupal](open-requirements-library/web-consolidation.md)
   * [Section 508 Compliance for Website Maintenance and Enhancement in Public Sector Procurement](open-requirements-library/accessibility.md)
+  * [Modernized Procurement Workflow - Discovery Objectives](open-requirements-library/modernized-procurement.md)
 * [Guide to Preparing and Maintaining Impactful Past Performance for Government Contractors](https://docs.google.com/document/d/1UyJ4l1tcvMGYO2yMCCpctu1qzuSkpfNBaSAgGp-lCis) [GoogleDoc]
 * [5 Tips for Program Validation Support](https://docs.google.com/document/d/1LEqZjH2pco2gPtl1WSSiMXj0d4oD42jfd_pFiTjcAD8) [GoogleDoc]
 * [CivicActions Guidebook](https://guidebook.civicactions.com/en/latest/)
