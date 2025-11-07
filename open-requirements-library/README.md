@@ -12,4 +12,4 @@ Current library files include:
 
 Related articles:
 
-- [Free and Open Source Software (FOSS) as Commercial Off-the-Shelf (COTS)](/open-practice/?file=FOSS-COTS.md)
+- [Free and Open Source Software (FOSS) as Commercial Off-the-Shelf (COTS)](/open-requirements-library/FOSS-COTS.md)
