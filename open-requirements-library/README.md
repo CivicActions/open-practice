@@ -8,7 +8,7 @@ Current library files include:
 - [Open Source Procurement FAQ](/open-practice/?file=OSS-procurement-FAQ.md)
 - [Agile Migration to Drupal](/open-requirements-library/agile-migrations.md)
 - [Rationalizing Web Properties with AI into Drupal](/open-requirements-library/web-consolidation.md)
-- [Section 508 Compliance for Website Maintenance and Enhancement](/open-practice/?file=accessibility.md)
+- [Section 508 Compliance for Website Maintenance and Enhancement](/open-requirements-library/accessibility.md)
 
 Related articles:
 
