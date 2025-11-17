@@ -16,4 +16,6 @@ Resources:
 - [Digital Toolkit](https://docs.google.com/document/d/1liMt3k14AevMLp2KFlIhAg9-ttEYqgN6yt5WuO6EC90/edit?tab=t.0)
 
 Videos:
+- [Welcome to Open November](https://vimeo.com/1132659789?share=copy&fl=sv&fe=ci)
 - [How to Contribute to a Drupal Module](https://vimeo.com/1132633409?fl=ip&fe=ec)
+- [How to Contribute to the Open Python Directory](https://vimeo.com/1132659789?share=copy&fl=sv&fe=ci)
