@@ -23,6 +23,7 @@ Open standards, open source, open data, open science, open government are ultima
 * [5 Tips for Program Validation Support](https://docs.google.com/document/d/1LEqZjH2pco2gPtl1WSSiMXj0d4oD42jfd_pFiTjcAD8) [GoogleDoc]
 * [CivicActions Guidebook](https://guidebook.civicactions.com/en/latest/)
 * [Open Python Directory](https://github.com/CivicActions/open-python-directory)
+* [United States DOGE Service (USDS) Digital IT Acquisition Professional Training (DITAP) Curriculum Refresh](https://github.com/usds/ditap-curriculum-update/blob/main/README.md)
 
 
 ## Documentation
