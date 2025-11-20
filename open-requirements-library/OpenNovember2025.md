@@ -19,3 +19,5 @@ Videos:
 - [Welcome to Open November](https://vimeo.com/1132659789?share=copy&fl=sv&fe=ci)
 - [How to Contribute to a Drupal Module](https://vimeo.com/1132633409?fl=ip&fe=ec)
 - [How to Contribute to the Open Python Directory](https://vimeo.com/1132659789?share=copy&fl=sv&fe=ci)
+- [Open Requirements Library and Github](https://vimeo.com/1138656469?share=copy&fl=sv&fe=ci)
+- [The Importance of Openness](https://vimeo.com/1138656542?share=copy&fl=sv&fe=ci)
