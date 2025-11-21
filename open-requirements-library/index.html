@@ -668,6 +668,46 @@
             }
         }
 
+// Rewrite markdown links that point to other files in open-requirements-library
+function wireMarkdownLinks() {
+    const links = contentContainer.querySelectorAll('a[href]');
+
+    links.forEach((link) => {
+        const href = link.getAttribute('href');
+        if (!href) return;
+
+        // Leave full external URLs alone
+        if (/^https?:\/\//i.test(href)) {
+            return;
+        }
+
+        let filename = null;
+
+        // Case 1: /open-requirements-library/FILENAME.md or open-requirements-library/FILENAME.md
+        const libMatch = href.match(/\/?open-requirements-library\/([^#?]+\.md)(?:[#?].*)?$/i);
+        if (libMatch) {
+            filename = libMatch[1];
+        }
+
+        // Case 2: plain markdown file link like Open-Source-Procurement-Checklist.md
+        if (!filename && /\.md$/i.test(href)) {
+            filename = href.split('/').pop();
+        }
+
+        if (!filename) {
+            return;
+        }
+
+        const newHref = `?file=${encodeURIComponent(filename)}`;
+        link.setAttribute('href', newHref);
+
+        link.addEventListener('click', (event) => {
+            event.preventDefault();
+            fetchAndRenderMarkdown(filename);
+        });
+    });
+}
+        
         // Function to fetch and render the content of a markdown file
         async function fetchAndRenderMarkdown(filename) {
             const index = markdownFiles.findIndex(file => file.name === filename);
@@ -679,20 +719,24 @@
                     throw new Error(`Failed to fetch markdown file: ${response.statusText}`);
                 }
                 const markdownText = await response.text();
+                
                 // Use marked.js to convert markdown to HTML
-                const html = marked.parse(markdownText);
-                contentContainer.innerHTML = html;
-                
-                // Add tabindex to pre tags for keyboard navigation
-                document.querySelectorAll('pre').forEach(pre => {
-                    pre.setAttribute('tabindex', '0');
-                });
+const html = marked.parse(markdownText);
+contentContainer.innerHTML = html;
 
-                // Update the pagination links after content is loaded
-                updatePagination(index);
-                
-                // Update the active link
-                updateActiveLink(filename);
+// NEW: wire internal markdown links to the SPA router
+wireMarkdownLinks();
+
+// Add tabindex to pre tags for keyboard navigation
+document.querySelectorAll('pre').forEach(pre => {
+    pre.setAttribute('tabindex', '0');
+});
+
+// Update the pagination links after content is loaded
+updatePagination(index);
+
+// Update the active link
+updateActiveLink(filename);
 
                 // Use pushState to update the URL without reloading the page
                 const newUrl = `${window.location.protocol}//${window.location.host}${window.location.pathname}?file=${filename}`;
