@@ -24,6 +24,7 @@ Open standards, open source, open data, open science, open government are ultima
 * [CivicActions Guidebook](https://guidebook.civicactions.com/en/latest/)
 * [Open Python Directory](https://github.com/CivicActions/open-python-directory)
 * [United States DOGE Service (USDS) Digital IT Acquisition Professional Training (DITAP) Curriculum Refresh](https://github.com/usds/ditap-curriculum-update/blob/main/README.md)
+* [Design System Operations Knowledge Base](https://github.com/CivicActions/design-and-research/tree/main/design-systems)
 
 
 ## Documentation
