@@ -3,11 +3,10 @@
 
 Version 1.0 — CivicActions ProposalOps Edition
 
-**View Manual:** 
-https://docs.google.com/document/d/1It_2HpJVZXcZ9g5ttWtcqxmOyIXM_QAhzQh5i1g1OSM/edit?tab=t.0
+ 
+[**Manual**](https://docs.google.com/document/d/1It_2HpJVZXcZ9g5ttWtcqxmOyIXM_QAhzQh5i1g1OSM/edit?tab=t.0)
 
-**View Presentation Template:**
-https://docs.google.com/presentation/d/1jV0pIcregEsa3BJHdAkHkklZEM3Wp8RRVuXkNFw_6sE/edit?slide=id.g2b02996afe7_0_23#slide=id.g2b02996afe7_0_23 
+[**Presentation Template**](https://docs.google.com/presentation/d/1jV0pIcregEsa3BJHdAkHkklZEM3Wp8RRVuXkNFw_6sE/edit?slide=id.g2b02996afe7_0_23#slide=id.g2b02996afe7_0_23)
 
 ---
 
