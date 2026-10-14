@@ -248,6 +248,7 @@ SYSTEM: Convert the supplied HTML into JSON that matches the approved content‑
 - Custom development, as needed, for complex migrations using Drupal’s [Migrate API](https://www.drupal.org/docs/drupal-apis/migrate-api): Provides APIs for developers to write custom migrations and integrate with different data sources.
 - [Migrate Tools](https://www.drupal.org/project/migrate_tools): Offers a user interface and Drush commands to manage migrations, making it easier to execute and control the migration process.
 - [Drupal AI](https://www.drupal.org/project/ai): A set of modules and submodules providing content type creation, content creation, revision, and translation to assist in site migration efficiency and post-migration content support.
+- [Drupal AI Migration](https://www.drupal.org/project/ai_migration): Uses artificial intelligence to help automate and simplify content migrations into Drupal, including content mapping, transformation, and migration configuration.
 
 ### 10.5 Illustrative Acceptance‑Test Suite
 
