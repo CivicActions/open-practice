@@ -185,6 +185,25 @@ flowchart LR
 - **Load**: Import structured records into Drupal as **draft** items, tagged with metadata indicating their origin for traceability.
 - **Review Environment**: Deploy an isolated preview of the imported content so editors and stakeholders can perform acceptance testing without impacting production.
 
+```mermaid
+flowchart LR
+    subgraph A ["Source Site"]
+    B(Source content)
+    end 
+    B-->|Extract|C
+ 
+    subgraph E["AI Models"]
+    C(Raw HTML)
+    D(Structured records)
+    C-->|Transform|D
+    end
+    D-->|Load|G
+
+    subgraph F[Target Durpal Site]
+    G(Draft items for human review)
+    end
+```
+
 ### 5.5 Quality Assurance & Launch (Per Slice)
 
 - **Automated Validation**: Run a suite of tests covering broken links, accessibility, performance, and security.
