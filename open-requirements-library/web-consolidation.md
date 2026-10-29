@@ -32,6 +32,18 @@ Anyone can contribute to the Open Requirements for Rationalizing Web Properties 
 
 This requirements template supports solicitations aimed at merging _multiple_ sites across the enterprise into a **single, already‑live Drupal instance**. The purpose of this is typically **cost savings** through decommissioning and efficiencies gained from a streamlined enterprise-wide content management platform.
 
+```mermaid
+flowchart LR
+    A[Site 1]
+    B[Site 2]
+    C[Site 3]
+    D[Consolidated Drupal Site]
+
+    A --> D
+    B --> D
+    C --> D
+```
+
 This initiative also contributes directly to **technology rationalization** — a structured approach to inventorying and evaluating IT assets (such as websites, CMS platforms, and related tools) to identify redundancies, reduce inefficiencies, and make strategic decisions about consolidation or retirement. By collapsing disparate web properties into a unified Drupal platform, agencies are enabled to:
 
 - Reduce costs by eliminating duplicate systems and licenses
