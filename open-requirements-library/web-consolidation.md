@@ -145,8 +145,8 @@ The contractor shall perform the following discovery activities and deliverables
 ```mermaid
 flowchart LR
     subgraph A ["Comprehensive Automated Crawl"]
-    B(Slice A Pages)
-    C(Slice A Media Assets)
+    B(Slice A URLs)
+    C(Slice A Metadata)
     D(Slice A Link Structure)
     end
 
