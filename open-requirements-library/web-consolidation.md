@@ -142,6 +142,49 @@ The contractor shall perform the following discovery activities and deliverables
 4. **Human Review Workshop**: Content strategists and stakeholders validate or adjust the AI recommendations, ensuring alignment with user, agency, policy and regulatory needs, editorial standards and information architecture.
 5. **Signed‑Off Mapping Package**: Produce an approved content‑type mapping, redirect plan, and backlog of user stories for each resulting slice.
 
+```mermaid
+flowchart LR
+    subgraph "Comprehensive Automated Crawl"
+    A[Slice A]
+    B(Slice A Pages)
+    C(Slice A Media Assets)
+    D(Slice A Link Structure)
+    A --> B
+    A --> C
+    A --> D
+    end 
+
+    B-->E
+    C-->E
+    D-->E 
+    E{"Data Refinement (by humans)"}
+    E-->F
+
+    subgraph AI-Assisted Content Mapping
+    F[Large Language Model]
+    G(Proposed Drupal structures)
+    H(Complexity that needs special attention)
+    I(Logical Groupings)
+    F-->G
+    F-->H
+    F-->I
+    end
+
+    G-->J
+    H-->J
+    I-->J
+    J{Human Review Workshop}
+    J-->K
+    J-->L
+    J-->M
+    
+    subgraph Signoff-Mapping Package
+    K(Approved content‑type mapping)
+    L(Redirect plan)
+    M(Backlog of user stories)
+    end
+```
+
 ### 5.3 Destination Configuration (Per Slice)
 
 - **Content‑Type & Field Updates**: Add any missing fields, taxonomies, or view modes to the existing Drupal site while maintaining backward compatibility.
