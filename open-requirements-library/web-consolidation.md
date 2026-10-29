@@ -144,41 +144,27 @@ The contractor shall perform the following discovery activities and deliverables
 
 ```mermaid
 flowchart LR
-    subgraph "Comprehensive Automated Crawl"
-    A[Slice A]
+    subgraph A ["Comprehensive Automated Crawl"]
     B(Slice A Pages)
     C(Slice A Media Assets)
     D(Slice A Link Structure)
-    A --> B
-    A --> C
-    A --> D
-    end 
+    end
 
-    B-->E
-    C-->E
-    D-->E 
+    A-->E
     E{"Data Refinement (by humans)"}
     E-->F
 
-    subgraph AI-Assisted Content Mapping
-    F[Large Language Model]
+    subgraph F[AI-Assisted Content Mapping]
     G(Proposed Drupal structures)
     H(Complexity that needs special attention)
     I(Logical Groupings)
-    F-->G
-    F-->H
-    F-->I
     end
 
-    G-->J
-    H-->J
-    I-->J
+    F-->J
     J{Human Review Workshop}
-    J-->K
-    J-->L
-    J-->M
+    J-->N
     
-    subgraph Signoff-Mapping Package
+    subgraph N[Signed-off Mapping Package]
     K(Approved content‑type mapping)
     L(Redirect plan)
     M(Backlog of user stories)
