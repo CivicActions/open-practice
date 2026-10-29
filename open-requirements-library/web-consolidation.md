@@ -199,7 +199,7 @@ flowchart LR
     end
     D-->|Load|G
 
-    subgraph F[Target Durpal Site]
+    subgraph F[Target Drupal Site]
     G(Draft items for human review)
     end
 ```
