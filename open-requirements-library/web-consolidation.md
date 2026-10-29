@@ -105,7 +105,7 @@ Migrations are made agile by migrating in **slices** \- each slice is a distinct
 
 ```mermaid
 flowchart LR
-    subgraph Automated Crawl (proof of concept)
+    subgraph "Automated Crawl (proof of concept)"
     A[Source Site 1]
     B(Source 1 Pages)
     C(Source 1 Media Assets)
@@ -115,7 +115,7 @@ flowchart LR
     A --> C
     A --> D
     end 
-    subgraph AI-Assisted Mapping (proof of concept)
+    subgraph "AI-Assisted Mapping (proof of concept)"
     E[Large Language Model]
     B-->E
     C-->E
