@@ -151,7 +151,7 @@ flowchart LR
     end
 
     A-->E
-    E{"Data Refinement (by humans)"}
+    E{"Human Data Refinement"}
     E-->F
 
     subgraph F[AI-Assisted Content Mapping]
