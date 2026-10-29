@@ -34,9 +34,9 @@ This requirements template supports solicitations aimed at merging _multiple_ si
 
 ```mermaid
 flowchart LR
-    A[Site 1]
-    B[Site 2]
-    C[Site 3]
+    A[Source Site 1]
+    B[Source Site 2]
+    C[Source Site 3]
     D[Consolidated Drupal Site]
 
     A --> D
@@ -102,6 +102,30 @@ Migrations are made agile by migrating in **slices** \- each slice is a distinct
 - **Proof of Concept AI Mapping**: Feed crawl results into a large‑language model to generate a proposed set of Drupal content‑types and field structures.
 - **AI Governance Framework**: Detail the planned AI usage, including data masking procedures, confidence measurement methods, and mandatory human-in-the-loop checkpoints. Explicitly define human oversight at every AI stage, from initial audits and content mapping to transformation and QA, ensuring stakeholder validation and adherence to editorial and accessibility standards.
 - **Baseline Documentation**: Establish a single source of truth for content models, migration guidelines and acceptance criteria.
+
+```mermaid
+flowchart LR
+    subgraph Automated Crawl
+    A[Source Site 1]
+    B(Source 1 Pages)
+    C(Source 1 Media Assets)
+    D(Source 1 Link Structure)
+
+    A --> B
+    A --> C
+    A --> D
+    end 
+    subgraph AI-Assisted Mapping
+    E[Large Language Model]
+    B-->E
+    C-->E
+    D-->E 
+    E-->F
+    E-->G
+    F(Drupal Content Types)
+    G(Drupal Field Structure)
+    end
+```
 
 ### 5.2 Slice Discovery (Repeated per Source Site)
 
