@@ -32,6 +32,18 @@ Anyone can contribute to the Open Requirements for Rationalizing Web Properties 
 
 This requirements template supports solicitations aimed at merging _multiple_ sites across the enterprise into a **single, already‑live Drupal instance**. The purpose of this is typically **cost savings** through decommissioning and efficiencies gained from a streamlined enterprise-wide content management platform.
 
+```mermaid
+flowchart LR
+    A[Source Site 1]
+    B[Source Site 2]
+    C[Source Site 3]
+    D[Consolidated Drupal Site]
+
+    A --> D
+    B --> D
+    C --> D
+```
+
 This initiative also contributes directly to **technology rationalization** — a structured approach to inventorying and evaluating IT assets (such as websites, CMS platforms, and related tools) to identify redundancies, reduce inefficiencies, and make strategic decisions about consolidation or retirement. By collapsing disparate web properties into a unified Drupal platform, agencies are enabled to:
 
 - Reduce costs by eliminating duplicate systems and licenses
@@ -91,6 +103,30 @@ Migrations are made agile by migrating in **slices** \- each slice is a distinct
 - **AI Governance Framework**: Detail the planned AI usage, including data masking procedures, confidence measurement methods, and mandatory human-in-the-loop checkpoints. Explicitly define human oversight at every AI stage, from initial audits and content mapping to transformation and QA, ensuring stakeholder validation and adherence to editorial and accessibility standards.
 - **Baseline Documentation**: Establish a single source of truth for content models, migration guidelines and acceptance criteria.
 
+```mermaid
+flowchart LR
+    subgraph "Automated Crawl (proof of concept)"
+    A[Source Site 1]
+    B(Source 1 Pages)
+    C(Source 1 Media Assets)
+    D(Source 1 Link Structure)
+
+    A --> B
+    A --> C
+    A --> D
+    end 
+    subgraph "AI-Assisted Mapping (proof of concept)"
+    E[Large Language Model]
+    B-->E
+    C-->E
+    D-->E 
+    E-->F
+    E-->G
+    F(Proposed Drupal Content Types)
+    G(Proposed Drupal Field Structures)
+    end
+```
+
 ### 5.2 Slice Discovery (Repeated per Source Site)
 
 **Outcome of this phase — a definitive list of migration _slices_ for the source site**:
@@ -106,6 +142,35 @@ The contractor shall perform the following discovery activities and deliverables
 4. **Human Review Workshop**: Content strategists and stakeholders validate or adjust the AI recommendations, ensuring alignment with user, agency, policy and regulatory needs, editorial standards and information architecture.
 5. **Signed‑Off Mapping Package**: Produce an approved content‑type mapping, redirect plan, and backlog of user stories for each resulting slice.
 
+```mermaid
+flowchart LR
+    subgraph A ["Comprehensive Automated Crawl"]
+    B(Site 1 URLs)
+    C(Site 1 Metadata)
+    D(Site 1 Link Structure)
+    end
+
+    A-->E
+    E{"Human Data Refinement"}
+    E-->F
+
+    subgraph F[AI-Assisted Content Mapping]
+    G(Proposed Drupal structures)
+    H(Complexity that needs special attention)
+    I("Logical Groupings (proposed slices)")
+    end
+
+    F-->J
+    J{Human Review Workshop}
+    J-->N
+    
+    subgraph N[Signed-off Mapping Package]
+    K(Approved content‑type mapping per slice)
+    L(Redirect plan)
+    M(Backlog of user stories)
+    end
+```
+
 ### 5.3 Destination Configuration (Per Slice)
 
 - **Content‑Type & Field Updates**: Add any missing fields, taxonomies, or view modes to the existing Drupal site while maintaining backward compatibility.
@@ -119,6 +184,25 @@ The contractor shall perform the following discovery activities and deliverables
 - **Transform**: Apply AI models to convert raw HTML or data exports into structured records that match the approved content‑type schema, enriching metadata (e.g., alt‑text, tags) and initial HTML cleanup where feasible.
 - **Load**: Import structured records into Drupal as **draft** items, tagged with metadata indicating their origin for traceability.
 - **Review Environment**: Deploy an isolated preview of the imported content so editors and stakeholders can perform acceptance testing without impacting production.
+
+```mermaid
+flowchart LR
+    subgraph A ["Source Site"]
+    B(Source content)
+    end 
+    B-->|Extract|C
+ 
+    subgraph E["AI Models"]
+    C(Raw HTML)
+    D(Structured records)
+    C-->|Transform|D
+    end
+    D-->|Load|G
+
+    subgraph F[Target Drupal Site]
+    G(Draft items for human review)
+    end
+```
 
 ### 5.5 Quality Assurance & Launch (Per Slice)
 
